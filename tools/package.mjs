@@ -27,7 +27,7 @@ async function listFiles(directory){
     }
   }
   await visit(directory);
-  return result;
+  return result.sort();
 }
 
 async function zipDirectory(source,destination){

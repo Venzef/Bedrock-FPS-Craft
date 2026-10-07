@@ -4,13 +4,15 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "generate": "npm run generate:actionbar-hud && npm run generate:scoreboard && npm run generate:hud-glyphs && npm run build",
     "generate:actionbar-hud": "node --import tsx tools/generate-actionbar-hud.mjs",
     "generate:hud-glyphs": "node tools/generate-hud-glyphs.mjs",
     "build": "tsc -p tsconfig.json",
     "test": "node --test --import tsx tests/**/*.test.ts",
-    "check": "npm run build && npm test",
-    "package": "npm run generate:actionbar-hud && npm run generate:scoreboard && npm run build && node tools/package.mjs && npm run verify:scoreboard-package",
+    "check": "npm run verify:generated && npm test",
+    "package": "npm run generate && node tools/package.mjs && npm run verify:scoreboard-package",
     "generate:scoreboard": "node --import tsx tools/generate-scoreboard.mjs",
+    "verify:generated": "node tools/verify-generated.mjs",
     "verify:scoreboard-package": "node tools/verify-scoreboard-package.mjs"
   },
   "devDependencies": {
