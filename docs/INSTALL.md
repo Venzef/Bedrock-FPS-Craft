@@ -8,7 +8,7 @@ npm.cmd run check
 npm.cmd run package
 ```
 
-`release-1.1.23/BombDefusal-1.1.23.mcaddon`을 가져온 뒤 새 평지 월드에서 Behavior Pack과 Resource Pack을 모두 활성화한다. 운영자에게 `fps_admin` 태그를 부여하고 최초 한 번 경기장을 생성한다.
+<!-- INSTALL:RELEASE-PATH:START -->`release-1.1.25/BombDefusal-1.1.25.mcaddon`<!-- INSTALL:RELEASE-PATH:END -->을 가져온 뒤 새 평지 월드에서 Behavior Pack과 Resource Pack을 모두 활성화한다. 운영자에게 `fps_admin` 태그를 부여하고 최초 한 번 경기장을 생성한다.
 
 ```text
 /tag <플레이어> add fps_admin

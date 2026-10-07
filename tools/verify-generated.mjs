@@ -8,6 +8,7 @@ const generatedDirectories=[
   "behavior_pack/scripts",
 ];
 const generatedFiles=[
+  "docs/INSTALL.md",
   "docs/HUD_PROTOCOL.md",
   "resource_pack/font/glyph_E2.png",
   "resource_pack/textures/items/scoreboard.png",
