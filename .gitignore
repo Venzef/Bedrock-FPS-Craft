@@ -6,3 +6,4 @@ build/
 *.mcworld
 *.zip
 /release-*/
+/tmp/
