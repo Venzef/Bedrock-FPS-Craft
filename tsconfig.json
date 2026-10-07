@@ -6,6 +6,7 @@
     "strict": true,
     "skipLibCheck": true,
     "noEmitOnError": true,
+    "newLine": "lf",
     "outDir": "behavior_pack/scripts",
     "rootDir": "src",
     "lib": ["ES2022"]
