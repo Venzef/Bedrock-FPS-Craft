@@ -1,0 +1,29 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "fps:bomb",
+      "item": { "fps:bomb": "query.is_owner_identifier_any('minecraft:player')" },
+      "materials": {
+        "default": "entity_alphatest",
+        "enchanted": "entity_alphatest_glint"
+      },
+      "textures": {
+        "default": "textures/entity/planted_bomb",
+        "enchanted": "textures/misc/enchanted_item_glint"
+      },
+      "geometry": { "default": "geometry.bomb" },
+      "animations": {
+        "hold_first_person": "animation.bomb.hold_first_person",
+        "hold_third_person": "animation.bomb.hold_third_person",
+        "planting_first_person": "animation.bomb.planting_first_person",
+        "planting_third_person": "animation.bomb.planting_third_person",
+        "use_cycle_controller": "controller.animation.bomb.use_cycle"
+      },
+      "scripts": {
+        "animate": ["use_cycle_controller"]
+      },
+      "render_controllers": ["controller.render.item_default"]
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "bedrock-bomb-defusal",
+  "version": "1.1.25",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate:actionbar-hud": "node --import tsx tools/generate-actionbar-hud.mjs",
+    "generate:hud-glyphs": "node tools/generate-hud-glyphs.mjs",
+    "build": "tsc -p tsconfig.json",
+    "test": "node --test --import tsx tests/**/*.test.ts",
+    "check": "npm run build && npm test",
+    "package": "npm run generate:actionbar-hud && npm run generate:scoreboard && npm run build && node tools/package.mjs && npm run verify:scoreboard-package",
+    "generate:scoreboard": "node --import tsx tools/generate-scoreboard.mjs",
+    "verify:scoreboard-package": "node tools/verify-scoreboard-package.mjs"
+  },
+  "devDependencies": {
+    "@minecraft/server": "2.3.0",
+    "@minecraft/server-ui": "2.0.0",
+    "@types/node": "^24.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  }
+}

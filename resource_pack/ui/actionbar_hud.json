@@ -1,0 +1,3573 @@
+{
+  "namespace": "fc_actionbar",
+  "magazine_label@fc.l": {
+    "$atext": "$actionbar_text",
+    "anchor_from": "bottom_right",
+    "anchor_to": "bottom_right",
+    "offset": "$offset",
+    "$offset": [
+      -120,
+      -10
+    ],
+    "variables": [
+      {
+        "requires": "((not $desktop_screen and not $education_edition) or ($is_android or $is_ios))",
+        "$offset": [
+          -120,
+          -10
+        ]
+      }
+    ],
+    "font_scale_factor": 1,
+    "shadow": true
+  },
+  "reserve_label@fc.l": {
+    "$atext": "$actionbar_text",
+    "anchor_from": "bottom_right",
+    "anchor_to": "bottom_right",
+    "offset": "$offset",
+    "$offset": [
+      -80,
+      -10
+    ],
+    "variables": [
+      {
+        "requires": "((not $desktop_screen and not $education_edition) or ($is_android or $is_ios))",
+        "$offset": [
+          -80,
+          -10
+        ]
+      }
+    ],
+    "font_scale_factor": 1,
+    "shadow": true
+  },
+  "weapon_status_label@fc.l": {
+    "$atext": "$actionbar_text",
+    "anchor_from": "bottom_right",
+    "anchor_to": "bottom_right",
+    "offset": "$offset",
+    "$offset": [
+      -105,
+      -10
+    ],
+    "variables": [
+      {
+        "requires": "((not $desktop_screen and not $education_edition) or ($is_android or $is_ios))",
+        "$offset": [
+          -105,
+          -10
+        ]
+      }
+    ],
+    "font_scale_factor": 1,
+    "shadow": true
+  },
+  "objective_panel@fc.p": {
+    "$atext": "$actionbar_text",
+    "type": "panel",
+    "size": [
+      100,
+      20
+    ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "offset": "$offset",
+    "$offset": [
+      0,
+      80
+    ],
+    "variables": [
+      {
+        "requires": "((not $desktop_screen and not $education_edition) or ($is_android or $is_ios))",
+        "$offset": [
+          0,
+          46
+        ]
+      }
+    ]
+  },
+  "objective_background@fc.img": {
+    "texture": "textures/ui/hud_rectangle_text_background",
+    "size": [
+      100,
+      18
+    ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [
+      0,
+      2
+    ],
+    "keep_ratio": false,
+    "alpha": 0.4,
+    "layer": 0
+  },
+  "objective_track@fc.img": {
+    "texture": "fc/white",
+    "size": [
+      100,
+      2
+    ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [
+      0,
+      0
+    ],
+    "keep_ratio": false,
+    "color": [
+      0.65,
+      0.65,
+      0.65
+    ],
+    "alpha": 0.65,
+    "layer": 1
+  },
+  "objective_label@fc.l": {
+    "$atext": "$actionbar_text",
+    "shadow": true,
+    "layer": 1
+  },
+  "objective_icon@fc_actionbar.objective_label": {
+    "offset": [
+      -32,
+      1
+    ],
+    "font_scale_factor": 1
+  },
+  "objective_action@fc_actionbar.objective_label": {
+    "localize": true,
+    "offset": [
+      -2,
+      1
+    ]
+  },
+  "objective_time@fc_actionbar.objective_label": {
+    "offset": [
+      34,
+      1
+    ]
+  },
+  "objective_fill@fc.img": {
+    "$atext": "$actionbar_text",
+    "texture": "fc/white",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [
+      0,
+      0
+    ],
+    "keep_ratio": false,
+    "color": [
+      1,
+      0.12,
+      0.12
+    ],
+    "alpha": 1,
+    "layer": 2
+  },
+  "objective_frame_00@fc_actionbar.objective_fill": {
+    "size": [
+      0,
+      2
+    ],
+    "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G00')"
+  },
+  "objective_frame_01@fc_actionbar.objective_fill": {
+    "size": [
+      5,
+      2
+    ],
+    "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G01')"
+  },
+  "objective_frame_02@fc_actionbar.objective_fill": {
+    "size": [
+      10,
+      2
+    ],
+    "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G02')"
+  },
+  "objective_frame_03@fc_actionbar.objective_fill": {
+    "size": [
+      15,
+      2
+    ],
+    "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G03')"
+  },
+  "objective_frame_04@fc_actionbar.objective_fill": {
+    "size": [
+      20,
+      2
+    ],
+    "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G04')"
+  },
+  "objective_frame_05@fc_actionbar.objective_fill": {
+    "size": [
+      25,
+      2
+    ],
+    "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G05')"
+  },
+  "objective_frame_06@fc_actionbar.objective_fill": {
+    "size": [
+      30,
+      2
+    ],
+    "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G06')"
+  },
+  "objective_frame_07@fc_actionbar.objective_fill": {
+    "size": [
+      35,
+      2
+    ],
+    "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G07')"
+  },
+  "objective_frame_08@fc_actionbar.objective_fill": {
+    "size": [
+      40,
+      2
+    ],
+    "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G08')"
+  },
+  "objective_frame_09@fc_actionbar.objective_fill": {
+    "size": [
+      45,
+      2
+    ],
+    "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G09')"
+  },
+  "objective_frame_10@fc_actionbar.objective_fill": {
+    "size": [
+      50,
+      2
+    ],
+    "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G10')"
+  },
+  "objective_frame_11@fc_actionbar.objective_fill": {
+    "size": [
+      55,
+      2
+    ],
+    "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G11')"
+  },
+  "objective_frame_12@fc_actionbar.objective_fill": {
+    "size": [
+      60,
+      2
+    ],
+    "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G12')"
+  },
+  "objective_frame_13@fc_actionbar.objective_fill": {
+    "size": [
+      65,
+      2
+    ],
+    "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G13')"
+  },
+  "objective_frame_14@fc_actionbar.objective_fill": {
+    "size": [
+      70,
+      2
+    ],
+    "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G14')"
+  },
+  "objective_frame_15@fc_actionbar.objective_fill": {
+    "size": [
+      75,
+      2
+    ],
+    "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G15')"
+  },
+  "objective_frame_16@fc_actionbar.objective_fill": {
+    "size": [
+      80,
+      2
+    ],
+    "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G16')"
+  },
+  "objective_frame_17@fc_actionbar.objective_fill": {
+    "size": [
+      85,
+      2
+    ],
+    "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G17')"
+  },
+  "objective_frame_18@fc_actionbar.objective_fill": {
+    "size": [
+      90,
+      2
+    ],
+    "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G18')"
+  },
+  "objective_frame_19@fc_actionbar.objective_fill": {
+    "size": [
+      95,
+      2
+    ],
+    "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G19')"
+  },
+  "objective_frame_20@fc_actionbar.objective_fill": {
+    "size": [
+      100,
+      2
+    ],
+    "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G20')"
+  },
+  "render": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "controls": [
+      {
+        "magazine_000_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "magazine_000@fc_actionbar.magazine_000"
+            }
+          }
+        }
+      },
+      {
+        "magazine_001_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "magazine_001@fc_actionbar.magazine_001"
+            }
+          }
+        }
+      },
+      {
+        "magazine_002_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "magazine_002@fc_actionbar.magazine_002"
+            }
+          }
+        }
+      },
+      {
+        "magazine_003_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "magazine_003@fc_actionbar.magazine_003"
+            }
+          }
+        }
+      },
+      {
+        "magazine_004_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "magazine_004@fc_actionbar.magazine_004"
+            }
+          }
+        }
+      },
+      {
+        "magazine_005_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "magazine_005@fc_actionbar.magazine_005"
+            }
+          }
+        }
+      },
+      {
+        "magazine_006_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "magazine_006@fc_actionbar.magazine_006"
+            }
+          }
+        }
+      },
+      {
+        "magazine_007_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "magazine_007@fc_actionbar.magazine_007"
+            }
+          }
+        }
+      },
+      {
+        "magazine_008_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "magazine_008@fc_actionbar.magazine_008"
+            }
+          }
+        }
+      },
+      {
+        "magazine_009_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "magazine_009@fc_actionbar.magazine_009"
+            }
+          }
+        }
+      },
+      {
+        "magazine_010_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "magazine_010@fc_actionbar.magazine_010"
+            }
+          }
+        }
+      },
+      {
+        "magazine_011_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "magazine_011@fc_actionbar.magazine_011"
+            }
+          }
+        }
+      },
+      {
+        "magazine_012_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "magazine_012@fc_actionbar.magazine_012"
+            }
+          }
+        }
+      },
+      {
+        "magazine_013_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "magazine_013@fc_actionbar.magazine_013"
+            }
+          }
+        }
+      },
+      {
+        "magazine_014_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "magazine_014@fc_actionbar.magazine_014"
+            }
+          }
+        }
+      },
+      {
+        "magazine_015_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "magazine_015@fc_actionbar.magazine_015"
+            }
+          }
+        }
+      },
+      {
+        "magazine_016_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "magazine_016@fc_actionbar.magazine_016"
+            }
+          }
+        }
+      },
+      {
+        "magazine_017_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "magazine_017@fc_actionbar.magazine_017"
+            }
+          }
+        }
+      },
+      {
+        "magazine_018_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "magazine_018@fc_actionbar.magazine_018"
+            }
+          }
+        }
+      },
+      {
+        "magazine_019_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "magazine_019@fc_actionbar.magazine_019"
+            }
+          }
+        }
+      },
+      {
+        "magazine_020_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "magazine_020@fc_actionbar.magazine_020"
+            }
+          }
+        }
+      },
+      {
+        "magazine_021_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "magazine_021@fc_actionbar.magazine_021"
+            }
+          }
+        }
+      },
+      {
+        "magazine_022_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "magazine_022@fc_actionbar.magazine_022"
+            }
+          }
+        }
+      },
+      {
+        "magazine_023_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "magazine_023@fc_actionbar.magazine_023"
+            }
+          }
+        }
+      },
+      {
+        "magazine_024_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "magazine_024@fc_actionbar.magazine_024"
+            }
+          }
+        }
+      },
+      {
+        "magazine_025_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "magazine_025@fc_actionbar.magazine_025"
+            }
+          }
+        }
+      },
+      {
+        "magazine_026_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "magazine_026@fc_actionbar.magazine_026"
+            }
+          }
+        }
+      },
+      {
+        "magazine_027_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "magazine_027@fc_actionbar.magazine_027"
+            }
+          }
+        }
+      },
+      {
+        "magazine_028_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "magazine_028@fc_actionbar.magazine_028"
+            }
+          }
+        }
+      },
+      {
+        "magazine_029_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "magazine_029@fc_actionbar.magazine_029"
+            }
+          }
+        }
+      },
+      {
+        "magazine_030_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "magazine_030@fc_actionbar.magazine_030"
+            }
+          }
+        }
+      },
+      {
+        "slash_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "slash@fc_actionbar.slash"
+            }
+          }
+        }
+      },
+      {
+        "reserve_000_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_000@fc_actionbar.reserve_000"
+            }
+          }
+        }
+      },
+      {
+        "reserve_001_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_001@fc_actionbar.reserve_001"
+            }
+          }
+        }
+      },
+      {
+        "reserve_002_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_002@fc_actionbar.reserve_002"
+            }
+          }
+        }
+      },
+      {
+        "reserve_003_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_003@fc_actionbar.reserve_003"
+            }
+          }
+        }
+      },
+      {
+        "reserve_004_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_004@fc_actionbar.reserve_004"
+            }
+          }
+        }
+      },
+      {
+        "reserve_005_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_005@fc_actionbar.reserve_005"
+            }
+          }
+        }
+      },
+      {
+        "reserve_006_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_006@fc_actionbar.reserve_006"
+            }
+          }
+        }
+      },
+      {
+        "reserve_007_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_007@fc_actionbar.reserve_007"
+            }
+          }
+        }
+      },
+      {
+        "reserve_008_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_008@fc_actionbar.reserve_008"
+            }
+          }
+        }
+      },
+      {
+        "reserve_009_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_009@fc_actionbar.reserve_009"
+            }
+          }
+        }
+      },
+      {
+        "reserve_010_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_010@fc_actionbar.reserve_010"
+            }
+          }
+        }
+      },
+      {
+        "reserve_011_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_011@fc_actionbar.reserve_011"
+            }
+          }
+        }
+      },
+      {
+        "reserve_012_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_012@fc_actionbar.reserve_012"
+            }
+          }
+        }
+      },
+      {
+        "reserve_013_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_013@fc_actionbar.reserve_013"
+            }
+          }
+        }
+      },
+      {
+        "reserve_014_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_014@fc_actionbar.reserve_014"
+            }
+          }
+        }
+      },
+      {
+        "reserve_015_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_015@fc_actionbar.reserve_015"
+            }
+          }
+        }
+      },
+      {
+        "reserve_016_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_016@fc_actionbar.reserve_016"
+            }
+          }
+        }
+      },
+      {
+        "reserve_017_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_017@fc_actionbar.reserve_017"
+            }
+          }
+        }
+      },
+      {
+        "reserve_018_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_018@fc_actionbar.reserve_018"
+            }
+          }
+        }
+      },
+      {
+        "reserve_019_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_019@fc_actionbar.reserve_019"
+            }
+          }
+        }
+      },
+      {
+        "reserve_020_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_020@fc_actionbar.reserve_020"
+            }
+          }
+        }
+      },
+      {
+        "reserve_021_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_021@fc_actionbar.reserve_021"
+            }
+          }
+        }
+      },
+      {
+        "reserve_022_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_022@fc_actionbar.reserve_022"
+            }
+          }
+        }
+      },
+      {
+        "reserve_023_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_023@fc_actionbar.reserve_023"
+            }
+          }
+        }
+      },
+      {
+        "reserve_024_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_024@fc_actionbar.reserve_024"
+            }
+          }
+        }
+      },
+      {
+        "reserve_025_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_025@fc_actionbar.reserve_025"
+            }
+          }
+        }
+      },
+      {
+        "reserve_026_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_026@fc_actionbar.reserve_026"
+            }
+          }
+        }
+      },
+      {
+        "reserve_027_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_027@fc_actionbar.reserve_027"
+            }
+          }
+        }
+      },
+      {
+        "reserve_028_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_028@fc_actionbar.reserve_028"
+            }
+          }
+        }
+      },
+      {
+        "reserve_029_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_029@fc_actionbar.reserve_029"
+            }
+          }
+        }
+      },
+      {
+        "reserve_030_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_030@fc_actionbar.reserve_030"
+            }
+          }
+        }
+      },
+      {
+        "reserve_031_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_031@fc_actionbar.reserve_031"
+            }
+          }
+        }
+      },
+      {
+        "reserve_032_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_032@fc_actionbar.reserve_032"
+            }
+          }
+        }
+      },
+      {
+        "reserve_033_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_033@fc_actionbar.reserve_033"
+            }
+          }
+        }
+      },
+      {
+        "reserve_034_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_034@fc_actionbar.reserve_034"
+            }
+          }
+        }
+      },
+      {
+        "reserve_035_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_035@fc_actionbar.reserve_035"
+            }
+          }
+        }
+      },
+      {
+        "reserve_036_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_036@fc_actionbar.reserve_036"
+            }
+          }
+        }
+      },
+      {
+        "reserve_037_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_037@fc_actionbar.reserve_037"
+            }
+          }
+        }
+      },
+      {
+        "reserve_038_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_038@fc_actionbar.reserve_038"
+            }
+          }
+        }
+      },
+      {
+        "reserve_039_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_039@fc_actionbar.reserve_039"
+            }
+          }
+        }
+      },
+      {
+        "reserve_040_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_040@fc_actionbar.reserve_040"
+            }
+          }
+        }
+      },
+      {
+        "reserve_041_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_041@fc_actionbar.reserve_041"
+            }
+          }
+        }
+      },
+      {
+        "reserve_042_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_042@fc_actionbar.reserve_042"
+            }
+          }
+        }
+      },
+      {
+        "reserve_043_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_043@fc_actionbar.reserve_043"
+            }
+          }
+        }
+      },
+      {
+        "reserve_044_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_044@fc_actionbar.reserve_044"
+            }
+          }
+        }
+      },
+      {
+        "reserve_045_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_045@fc_actionbar.reserve_045"
+            }
+          }
+        }
+      },
+      {
+        "reserve_046_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_046@fc_actionbar.reserve_046"
+            }
+          }
+        }
+      },
+      {
+        "reserve_047_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_047@fc_actionbar.reserve_047"
+            }
+          }
+        }
+      },
+      {
+        "reserve_048_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_048@fc_actionbar.reserve_048"
+            }
+          }
+        }
+      },
+      {
+        "reserve_049_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_049@fc_actionbar.reserve_049"
+            }
+          }
+        }
+      },
+      {
+        "reserve_050_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_050@fc_actionbar.reserve_050"
+            }
+          }
+        }
+      },
+      {
+        "reserve_051_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_051@fc_actionbar.reserve_051"
+            }
+          }
+        }
+      },
+      {
+        "reserve_052_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_052@fc_actionbar.reserve_052"
+            }
+          }
+        }
+      },
+      {
+        "reserve_053_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_053@fc_actionbar.reserve_053"
+            }
+          }
+        }
+      },
+      {
+        "reserve_054_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_054@fc_actionbar.reserve_054"
+            }
+          }
+        }
+      },
+      {
+        "reserve_055_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_055@fc_actionbar.reserve_055"
+            }
+          }
+        }
+      },
+      {
+        "reserve_056_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_056@fc_actionbar.reserve_056"
+            }
+          }
+        }
+      },
+      {
+        "reserve_057_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_057@fc_actionbar.reserve_057"
+            }
+          }
+        }
+      },
+      {
+        "reserve_058_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_058@fc_actionbar.reserve_058"
+            }
+          }
+        }
+      },
+      {
+        "reserve_059_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_059@fc_actionbar.reserve_059"
+            }
+          }
+        }
+      },
+      {
+        "reserve_060_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_060@fc_actionbar.reserve_060"
+            }
+          }
+        }
+      },
+      {
+        "reserve_061_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_061@fc_actionbar.reserve_061"
+            }
+          }
+        }
+      },
+      {
+        "reserve_062_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_062@fc_actionbar.reserve_062"
+            }
+          }
+        }
+      },
+      {
+        "reserve_063_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_063@fc_actionbar.reserve_063"
+            }
+          }
+        }
+      },
+      {
+        "reserve_064_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_064@fc_actionbar.reserve_064"
+            }
+          }
+        }
+      },
+      {
+        "reserve_065_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_065@fc_actionbar.reserve_065"
+            }
+          }
+        }
+      },
+      {
+        "reserve_066_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_066@fc_actionbar.reserve_066"
+            }
+          }
+        }
+      },
+      {
+        "reserve_067_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_067@fc_actionbar.reserve_067"
+            }
+          }
+        }
+      },
+      {
+        "reserve_068_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_068@fc_actionbar.reserve_068"
+            }
+          }
+        }
+      },
+      {
+        "reserve_069_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_069@fc_actionbar.reserve_069"
+            }
+          }
+        }
+      },
+      {
+        "reserve_070_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_070@fc_actionbar.reserve_070"
+            }
+          }
+        }
+      },
+      {
+        "reserve_071_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_071@fc_actionbar.reserve_071"
+            }
+          }
+        }
+      },
+      {
+        "reserve_072_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_072@fc_actionbar.reserve_072"
+            }
+          }
+        }
+      },
+      {
+        "reserve_073_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_073@fc_actionbar.reserve_073"
+            }
+          }
+        }
+      },
+      {
+        "reserve_074_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_074@fc_actionbar.reserve_074"
+            }
+          }
+        }
+      },
+      {
+        "reserve_075_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_075@fc_actionbar.reserve_075"
+            }
+          }
+        }
+      },
+      {
+        "reserve_076_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_076@fc_actionbar.reserve_076"
+            }
+          }
+        }
+      },
+      {
+        "reserve_077_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_077@fc_actionbar.reserve_077"
+            }
+          }
+        }
+      },
+      {
+        "reserve_078_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_078@fc_actionbar.reserve_078"
+            }
+          }
+        }
+      },
+      {
+        "reserve_079_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_079@fc_actionbar.reserve_079"
+            }
+          }
+        }
+      },
+      {
+        "reserve_080_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_080@fc_actionbar.reserve_080"
+            }
+          }
+        }
+      },
+      {
+        "reserve_081_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_081@fc_actionbar.reserve_081"
+            }
+          }
+        }
+      },
+      {
+        "reserve_082_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_082@fc_actionbar.reserve_082"
+            }
+          }
+        }
+      },
+      {
+        "reserve_083_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_083@fc_actionbar.reserve_083"
+            }
+          }
+        }
+      },
+      {
+        "reserve_084_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_084@fc_actionbar.reserve_084"
+            }
+          }
+        }
+      },
+      {
+        "reserve_085_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_085@fc_actionbar.reserve_085"
+            }
+          }
+        }
+      },
+      {
+        "reserve_086_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_086@fc_actionbar.reserve_086"
+            }
+          }
+        }
+      },
+      {
+        "reserve_087_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_087@fc_actionbar.reserve_087"
+            }
+          }
+        }
+      },
+      {
+        "reserve_088_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_088@fc_actionbar.reserve_088"
+            }
+          }
+        }
+      },
+      {
+        "reserve_089_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_089@fc_actionbar.reserve_089"
+            }
+          }
+        }
+      },
+      {
+        "reserve_090_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_090@fc_actionbar.reserve_090"
+            }
+          }
+        }
+      },
+      {
+        "reserve_091_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_091@fc_actionbar.reserve_091"
+            }
+          }
+        }
+      },
+      {
+        "reserve_092_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_092@fc_actionbar.reserve_092"
+            }
+          }
+        }
+      },
+      {
+        "reserve_093_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_093@fc_actionbar.reserve_093"
+            }
+          }
+        }
+      },
+      {
+        "reserve_094_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_094@fc_actionbar.reserve_094"
+            }
+          }
+        }
+      },
+      {
+        "reserve_095_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_095@fc_actionbar.reserve_095"
+            }
+          }
+        }
+      },
+      {
+        "reserve_096_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_096@fc_actionbar.reserve_096"
+            }
+          }
+        }
+      },
+      {
+        "reserve_097_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_097@fc_actionbar.reserve_097"
+            }
+          }
+        }
+      },
+      {
+        "reserve_098_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_098@fc_actionbar.reserve_098"
+            }
+          }
+        }
+      },
+      {
+        "reserve_099_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_099@fc_actionbar.reserve_099"
+            }
+          }
+        }
+      },
+      {
+        "reserve_100_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_100@fc_actionbar.reserve_100"
+            }
+          }
+        }
+      },
+      {
+        "reserve_101_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_101@fc_actionbar.reserve_101"
+            }
+          }
+        }
+      },
+      {
+        "reserve_102_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_102@fc_actionbar.reserve_102"
+            }
+          }
+        }
+      },
+      {
+        "reserve_103_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_103@fc_actionbar.reserve_103"
+            }
+          }
+        }
+      },
+      {
+        "reserve_104_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_104@fc_actionbar.reserve_104"
+            }
+          }
+        }
+      },
+      {
+        "reserve_105_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_105@fc_actionbar.reserve_105"
+            }
+          }
+        }
+      },
+      {
+        "reserve_106_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_106@fc_actionbar.reserve_106"
+            }
+          }
+        }
+      },
+      {
+        "reserve_107_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_107@fc_actionbar.reserve_107"
+            }
+          }
+        }
+      },
+      {
+        "reserve_108_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_108@fc_actionbar.reserve_108"
+            }
+          }
+        }
+      },
+      {
+        "reserve_109_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_109@fc_actionbar.reserve_109"
+            }
+          }
+        }
+      },
+      {
+        "reserve_110_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_110@fc_actionbar.reserve_110"
+            }
+          }
+        }
+      },
+      {
+        "reserve_111_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_111@fc_actionbar.reserve_111"
+            }
+          }
+        }
+      },
+      {
+        "reserve_112_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_112@fc_actionbar.reserve_112"
+            }
+          }
+        }
+      },
+      {
+        "reserve_113_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_113@fc_actionbar.reserve_113"
+            }
+          }
+        }
+      },
+      {
+        "reserve_114_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_114@fc_actionbar.reserve_114"
+            }
+          }
+        }
+      },
+      {
+        "reserve_115_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_115@fc_actionbar.reserve_115"
+            }
+          }
+        }
+      },
+      {
+        "reserve_116_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_116@fc_actionbar.reserve_116"
+            }
+          }
+        }
+      },
+      {
+        "reserve_117_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_117@fc_actionbar.reserve_117"
+            }
+          }
+        }
+      },
+      {
+        "reserve_118_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_118@fc_actionbar.reserve_118"
+            }
+          }
+        }
+      },
+      {
+        "reserve_119_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_119@fc_actionbar.reserve_119"
+            }
+          }
+        }
+      },
+      {
+        "reserve_120_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "reserve_120@fc_actionbar.reserve_120"
+            }
+          }
+        }
+      },
+      {
+        "knife_dash_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "knife_dash@fc_actionbar.knife_dash"
+            }
+          }
+        }
+      },
+      {
+        "bomb_dash_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "bomb_dash@fc_actionbar.bomb_dash"
+            }
+          }
+        }
+      },
+      {
+        "plant_hud_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "plant_hud@fc_actionbar.plant_hud"
+            }
+          }
+        }
+      },
+      {
+        "defuse_hud_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "defuse_hud@fc_actionbar.defuse_hud"
+            }
+          }
+        }
+      },
+      {
+        "defuse_kit_hud_factory": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "defuse_kit_hud@fc_actionbar.defuse_kit_hud"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "magazine_000@fc_actionbar.magazine_label": {
+    "text": "0",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.7s' * $atext))) = 'A000')))"
+  },
+  "magazine_001@fc_actionbar.magazine_label": {
+    "text": "1",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.7s' * $atext))) = 'A001')))"
+  },
+  "magazine_002@fc_actionbar.magazine_label": {
+    "text": "2",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.7s' * $atext))) = 'A002')))"
+  },
+  "magazine_003@fc_actionbar.magazine_label": {
+    "text": "3",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.7s' * $atext))) = 'A003')))"
+  },
+  "magazine_004@fc_actionbar.magazine_label": {
+    "text": "4",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.7s' * $atext))) = 'A004')))"
+  },
+  "magazine_005@fc_actionbar.magazine_label": {
+    "text": "5",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.7s' * $atext))) = 'A005')))"
+  },
+  "magazine_006@fc_actionbar.magazine_label": {
+    "text": "6",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.7s' * $atext))) = 'A006')))"
+  },
+  "magazine_007@fc_actionbar.magazine_label": {
+    "text": "7",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.7s' * $atext))) = 'A007')))"
+  },
+  "magazine_008@fc_actionbar.magazine_label": {
+    "text": "8",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.7s' * $atext))) = 'A008')))"
+  },
+  "magazine_009@fc_actionbar.magazine_label": {
+    "text": "9",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.7s' * $atext))) = 'A009')))"
+  },
+  "magazine_010@fc_actionbar.magazine_label": {
+    "text": "10",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.7s' * $atext))) = 'A010')))"
+  },
+  "magazine_011@fc_actionbar.magazine_label": {
+    "text": "11",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.7s' * $atext))) = 'A011')))"
+  },
+  "magazine_012@fc_actionbar.magazine_label": {
+    "text": "12",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.7s' * $atext))) = 'A012')))"
+  },
+  "magazine_013@fc_actionbar.magazine_label": {
+    "text": "13",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.7s' * $atext))) = 'A013')))"
+  },
+  "magazine_014@fc_actionbar.magazine_label": {
+    "text": "14",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.7s' * $atext))) = 'A014')))"
+  },
+  "magazine_015@fc_actionbar.magazine_label": {
+    "text": "15",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.7s' * $atext))) = 'A015')))"
+  },
+  "magazine_016@fc_actionbar.magazine_label": {
+    "text": "16",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.7s' * $atext))) = 'A016')))"
+  },
+  "magazine_017@fc_actionbar.magazine_label": {
+    "text": "17",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.7s' * $atext))) = 'A017')))"
+  },
+  "magazine_018@fc_actionbar.magazine_label": {
+    "text": "18",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.7s' * $atext))) = 'A018')))"
+  },
+  "magazine_019@fc_actionbar.magazine_label": {
+    "text": "19",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.7s' * $atext))) = 'A019')))"
+  },
+  "magazine_020@fc_actionbar.magazine_label": {
+    "text": "20",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.7s' * $atext))) = 'A020')))"
+  },
+  "magazine_021@fc_actionbar.magazine_label": {
+    "text": "21",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.7s' * $atext))) = 'A021')))"
+  },
+  "magazine_022@fc_actionbar.magazine_label": {
+    "text": "22",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.7s' * $atext))) = 'A022')))"
+  },
+  "magazine_023@fc_actionbar.magazine_label": {
+    "text": "23",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.7s' * $atext))) = 'A023')))"
+  },
+  "magazine_024@fc_actionbar.magazine_label": {
+    "text": "24",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.7s' * $atext))) = 'A024')))"
+  },
+  "magazine_025@fc_actionbar.magazine_label": {
+    "text": "25",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.7s' * $atext))) = 'A025')))"
+  },
+  "magazine_026@fc_actionbar.magazine_label": {
+    "text": "26",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.7s' * $atext))) = 'A026')))"
+  },
+  "magazine_027@fc_actionbar.magazine_label": {
+    "text": "27",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.7s' * $atext))) = 'A027')))"
+  },
+  "magazine_028@fc_actionbar.magazine_label": {
+    "text": "28",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.7s' * $atext))) = 'A028')))"
+  },
+  "magazine_029@fc_actionbar.magazine_label": {
+    "text": "29",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.7s' * $atext))) = 'A029')))"
+  },
+  "magazine_030@fc_actionbar.magazine_label": {
+    "text": "30",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.7s' * $atext))) = 'A030')))"
+  },
+  "slash@fc_actionbar.weapon_status_label": {
+    "text": "/",
+    "color": [
+      0.65,
+      0.65,
+      0.65
+    ],
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and (('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0'))"
+  },
+  "reserve_000@fc_actionbar.reserve_label": {
+    "text": "0",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R000')))"
+  },
+  "reserve_001@fc_actionbar.reserve_label": {
+    "text": "1",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R001')))"
+  },
+  "reserve_002@fc_actionbar.reserve_label": {
+    "text": "2",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R002')))"
+  },
+  "reserve_003@fc_actionbar.reserve_label": {
+    "text": "3",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R003')))"
+  },
+  "reserve_004@fc_actionbar.reserve_label": {
+    "text": "4",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R004')))"
+  },
+  "reserve_005@fc_actionbar.reserve_label": {
+    "text": "5",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R005')))"
+  },
+  "reserve_006@fc_actionbar.reserve_label": {
+    "text": "6",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R006')))"
+  },
+  "reserve_007@fc_actionbar.reserve_label": {
+    "text": "7",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R007')))"
+  },
+  "reserve_008@fc_actionbar.reserve_label": {
+    "text": "8",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R008')))"
+  },
+  "reserve_009@fc_actionbar.reserve_label": {
+    "text": "9",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R009')))"
+  },
+  "reserve_010@fc_actionbar.reserve_label": {
+    "text": "10",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R010')))"
+  },
+  "reserve_011@fc_actionbar.reserve_label": {
+    "text": "11",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R011')))"
+  },
+  "reserve_012@fc_actionbar.reserve_label": {
+    "text": "12",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R012')))"
+  },
+  "reserve_013@fc_actionbar.reserve_label": {
+    "text": "13",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R013')))"
+  },
+  "reserve_014@fc_actionbar.reserve_label": {
+    "text": "14",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R014')))"
+  },
+  "reserve_015@fc_actionbar.reserve_label": {
+    "text": "15",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R015')))"
+  },
+  "reserve_016@fc_actionbar.reserve_label": {
+    "text": "16",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R016')))"
+  },
+  "reserve_017@fc_actionbar.reserve_label": {
+    "text": "17",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R017')))"
+  },
+  "reserve_018@fc_actionbar.reserve_label": {
+    "text": "18",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R018')))"
+  },
+  "reserve_019@fc_actionbar.reserve_label": {
+    "text": "19",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R019')))"
+  },
+  "reserve_020@fc_actionbar.reserve_label": {
+    "text": "20",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R020')))"
+  },
+  "reserve_021@fc_actionbar.reserve_label": {
+    "text": "21",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R021')))"
+  },
+  "reserve_022@fc_actionbar.reserve_label": {
+    "text": "22",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R022')))"
+  },
+  "reserve_023@fc_actionbar.reserve_label": {
+    "text": "23",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R023')))"
+  },
+  "reserve_024@fc_actionbar.reserve_label": {
+    "text": "24",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R024')))"
+  },
+  "reserve_025@fc_actionbar.reserve_label": {
+    "text": "25",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R025')))"
+  },
+  "reserve_026@fc_actionbar.reserve_label": {
+    "text": "26",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R026')))"
+  },
+  "reserve_027@fc_actionbar.reserve_label": {
+    "text": "27",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R027')))"
+  },
+  "reserve_028@fc_actionbar.reserve_label": {
+    "text": "28",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R028')))"
+  },
+  "reserve_029@fc_actionbar.reserve_label": {
+    "text": "29",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R029')))"
+  },
+  "reserve_030@fc_actionbar.reserve_label": {
+    "text": "30",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R030')))"
+  },
+  "reserve_031@fc_actionbar.reserve_label": {
+    "text": "31",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R031')))"
+  },
+  "reserve_032@fc_actionbar.reserve_label": {
+    "text": "32",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R032')))"
+  },
+  "reserve_033@fc_actionbar.reserve_label": {
+    "text": "33",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R033')))"
+  },
+  "reserve_034@fc_actionbar.reserve_label": {
+    "text": "34",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R034')))"
+  },
+  "reserve_035@fc_actionbar.reserve_label": {
+    "text": "35",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R035')))"
+  },
+  "reserve_036@fc_actionbar.reserve_label": {
+    "text": "36",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R036')))"
+  },
+  "reserve_037@fc_actionbar.reserve_label": {
+    "text": "37",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R037')))"
+  },
+  "reserve_038@fc_actionbar.reserve_label": {
+    "text": "38",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R038')))"
+  },
+  "reserve_039@fc_actionbar.reserve_label": {
+    "text": "39",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R039')))"
+  },
+  "reserve_040@fc_actionbar.reserve_label": {
+    "text": "40",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R040')))"
+  },
+  "reserve_041@fc_actionbar.reserve_label": {
+    "text": "41",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R041')))"
+  },
+  "reserve_042@fc_actionbar.reserve_label": {
+    "text": "42",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R042')))"
+  },
+  "reserve_043@fc_actionbar.reserve_label": {
+    "text": "43",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R043')))"
+  },
+  "reserve_044@fc_actionbar.reserve_label": {
+    "text": "44",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R044')))"
+  },
+  "reserve_045@fc_actionbar.reserve_label": {
+    "text": "45",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R045')))"
+  },
+  "reserve_046@fc_actionbar.reserve_label": {
+    "text": "46",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R046')))"
+  },
+  "reserve_047@fc_actionbar.reserve_label": {
+    "text": "47",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R047')))"
+  },
+  "reserve_048@fc_actionbar.reserve_label": {
+    "text": "48",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R048')))"
+  },
+  "reserve_049@fc_actionbar.reserve_label": {
+    "text": "49",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R049')))"
+  },
+  "reserve_050@fc_actionbar.reserve_label": {
+    "text": "50",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R050')))"
+  },
+  "reserve_051@fc_actionbar.reserve_label": {
+    "text": "51",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R051')))"
+  },
+  "reserve_052@fc_actionbar.reserve_label": {
+    "text": "52",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R052')))"
+  },
+  "reserve_053@fc_actionbar.reserve_label": {
+    "text": "53",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R053')))"
+  },
+  "reserve_054@fc_actionbar.reserve_label": {
+    "text": "54",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R054')))"
+  },
+  "reserve_055@fc_actionbar.reserve_label": {
+    "text": "55",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R055')))"
+  },
+  "reserve_056@fc_actionbar.reserve_label": {
+    "text": "56",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R056')))"
+  },
+  "reserve_057@fc_actionbar.reserve_label": {
+    "text": "57",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R057')))"
+  },
+  "reserve_058@fc_actionbar.reserve_label": {
+    "text": "58",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R058')))"
+  },
+  "reserve_059@fc_actionbar.reserve_label": {
+    "text": "59",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R059')))"
+  },
+  "reserve_060@fc_actionbar.reserve_label": {
+    "text": "60",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R060')))"
+  },
+  "reserve_061@fc_actionbar.reserve_label": {
+    "text": "61",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R061')))"
+  },
+  "reserve_062@fc_actionbar.reserve_label": {
+    "text": "62",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R062')))"
+  },
+  "reserve_063@fc_actionbar.reserve_label": {
+    "text": "63",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R063')))"
+  },
+  "reserve_064@fc_actionbar.reserve_label": {
+    "text": "64",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R064')))"
+  },
+  "reserve_065@fc_actionbar.reserve_label": {
+    "text": "65",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R065')))"
+  },
+  "reserve_066@fc_actionbar.reserve_label": {
+    "text": "66",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R066')))"
+  },
+  "reserve_067@fc_actionbar.reserve_label": {
+    "text": "67",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R067')))"
+  },
+  "reserve_068@fc_actionbar.reserve_label": {
+    "text": "68",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R068')))"
+  },
+  "reserve_069@fc_actionbar.reserve_label": {
+    "text": "69",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R069')))"
+  },
+  "reserve_070@fc_actionbar.reserve_label": {
+    "text": "70",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R070')))"
+  },
+  "reserve_071@fc_actionbar.reserve_label": {
+    "text": "71",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R071')))"
+  },
+  "reserve_072@fc_actionbar.reserve_label": {
+    "text": "72",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R072')))"
+  },
+  "reserve_073@fc_actionbar.reserve_label": {
+    "text": "73",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R073')))"
+  },
+  "reserve_074@fc_actionbar.reserve_label": {
+    "text": "74",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R074')))"
+  },
+  "reserve_075@fc_actionbar.reserve_label": {
+    "text": "75",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R075')))"
+  },
+  "reserve_076@fc_actionbar.reserve_label": {
+    "text": "76",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R076')))"
+  },
+  "reserve_077@fc_actionbar.reserve_label": {
+    "text": "77",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R077')))"
+  },
+  "reserve_078@fc_actionbar.reserve_label": {
+    "text": "78",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R078')))"
+  },
+  "reserve_079@fc_actionbar.reserve_label": {
+    "text": "79",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R079')))"
+  },
+  "reserve_080@fc_actionbar.reserve_label": {
+    "text": "80",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R080')))"
+  },
+  "reserve_081@fc_actionbar.reserve_label": {
+    "text": "81",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R081')))"
+  },
+  "reserve_082@fc_actionbar.reserve_label": {
+    "text": "82",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R082')))"
+  },
+  "reserve_083@fc_actionbar.reserve_label": {
+    "text": "83",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R083')))"
+  },
+  "reserve_084@fc_actionbar.reserve_label": {
+    "text": "84",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R084')))"
+  },
+  "reserve_085@fc_actionbar.reserve_label": {
+    "text": "85",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R085')))"
+  },
+  "reserve_086@fc_actionbar.reserve_label": {
+    "text": "86",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R086')))"
+  },
+  "reserve_087@fc_actionbar.reserve_label": {
+    "text": "87",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R087')))"
+  },
+  "reserve_088@fc_actionbar.reserve_label": {
+    "text": "88",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R088')))"
+  },
+  "reserve_089@fc_actionbar.reserve_label": {
+    "text": "89",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R089')))"
+  },
+  "reserve_090@fc_actionbar.reserve_label": {
+    "text": "90",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R090')))"
+  },
+  "reserve_091@fc_actionbar.reserve_label": {
+    "text": "91",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R091')))"
+  },
+  "reserve_092@fc_actionbar.reserve_label": {
+    "text": "92",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R092')))"
+  },
+  "reserve_093@fc_actionbar.reserve_label": {
+    "text": "93",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R093')))"
+  },
+  "reserve_094@fc_actionbar.reserve_label": {
+    "text": "94",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R094')))"
+  },
+  "reserve_095@fc_actionbar.reserve_label": {
+    "text": "95",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R095')))"
+  },
+  "reserve_096@fc_actionbar.reserve_label": {
+    "text": "96",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R096')))"
+  },
+  "reserve_097@fc_actionbar.reserve_label": {
+    "text": "97",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R097')))"
+  },
+  "reserve_098@fc_actionbar.reserve_label": {
+    "text": "98",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R098')))"
+  },
+  "reserve_099@fc_actionbar.reserve_label": {
+    "text": "99",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R099')))"
+  },
+  "reserve_100@fc_actionbar.reserve_label": {
+    "text": "100",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R100')))"
+  },
+  "reserve_101@fc_actionbar.reserve_label": {
+    "text": "101",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R101')))"
+  },
+  "reserve_102@fc_actionbar.reserve_label": {
+    "text": "102",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R102')))"
+  },
+  "reserve_103@fc_actionbar.reserve_label": {
+    "text": "103",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R103')))"
+  },
+  "reserve_104@fc_actionbar.reserve_label": {
+    "text": "104",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R104')))"
+  },
+  "reserve_105@fc_actionbar.reserve_label": {
+    "text": "105",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R105')))"
+  },
+  "reserve_106@fc_actionbar.reserve_label": {
+    "text": "106",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R106')))"
+  },
+  "reserve_107@fc_actionbar.reserve_label": {
+    "text": "107",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R107')))"
+  },
+  "reserve_108@fc_actionbar.reserve_label": {
+    "text": "108",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R108')))"
+  },
+  "reserve_109@fc_actionbar.reserve_label": {
+    "text": "109",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R109')))"
+  },
+  "reserve_110@fc_actionbar.reserve_label": {
+    "text": "110",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R110')))"
+  },
+  "reserve_111@fc_actionbar.reserve_label": {
+    "text": "111",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R111')))"
+  },
+  "reserve_112@fc_actionbar.reserve_label": {
+    "text": "112",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R112')))"
+  },
+  "reserve_113@fc_actionbar.reserve_label": {
+    "text": "113",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R113')))"
+  },
+  "reserve_114@fc_actionbar.reserve_label": {
+    "text": "114",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R114')))"
+  },
+  "reserve_115@fc_actionbar.reserve_label": {
+    "text": "115",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R115')))"
+  },
+  "reserve_116@fc_actionbar.reserve_label": {
+    "text": "116",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R116')))"
+  },
+  "reserve_117@fc_actionbar.reserve_label": {
+    "text": "117",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R117')))"
+  },
+  "reserve_118@fc_actionbar.reserve_label": {
+    "text": "118",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R118')))"
+  },
+  "reserve_119@fc_actionbar.reserve_label": {
+    "text": "119",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R119')))"
+  },
+  "reserve_120@fc_actionbar.reserve_label": {
+    "text": "120",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and ((('%.2s' * ($atext - ('%.4s' * $atext))) = 'W0') and (('%.4s' * ($atext - ('%.11s' * $atext))) = 'R120')))"
+  },
+  "knife_dash@fc_actionbar.weapon_status_label": {
+    "text": "- / -",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and (('%.3s' * ($atext - ('%.4s' * $atext))) = 'W14'))"
+  },
+  "bomb_dash@fc_actionbar.weapon_status_label": {
+    "text": "- / -",
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and (('%.3s' * ($atext - ('%.4s' * $atext))) = 'WFF'))"
+  },
+  "plant_hud@fc_actionbar.objective_panel": {
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and (('%.2s' * ($atext - ('%.15s' * $atext))) = 'I1'))",
+    "controls": [
+      {
+        "background@fc_actionbar.objective_background": {}
+      },
+      {
+        "track@fc_actionbar.objective_track": {}
+      },
+      {
+        "icon@fc_actionbar.objective_icon": {
+          "text": ""
+        }
+      },
+      {
+        "action@fc_actionbar.objective_action": {
+          "text": "fps.hud.plant"
+        }
+      },
+      {
+        "time_00@fc_actionbar.objective_time": {
+          "text": "3.0s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G00')"
+        }
+      },
+      {
+        "time_01@fc_actionbar.objective_time": {
+          "text": "2.9s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G01')"
+        }
+      },
+      {
+        "time_02@fc_actionbar.objective_time": {
+          "text": "2.7s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G02')"
+        }
+      },
+      {
+        "time_03@fc_actionbar.objective_time": {
+          "text": "2.5s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G03')"
+        }
+      },
+      {
+        "time_04@fc_actionbar.objective_time": {
+          "text": "2.4s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G04')"
+        }
+      },
+      {
+        "time_05@fc_actionbar.objective_time": {
+          "text": "2.3s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G05')"
+        }
+      },
+      {
+        "time_06@fc_actionbar.objective_time": {
+          "text": "2.1s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G06')"
+        }
+      },
+      {
+        "time_07@fc_actionbar.objective_time": {
+          "text": "1.9s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G07')"
+        }
+      },
+      {
+        "time_08@fc_actionbar.objective_time": {
+          "text": "1.8s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G08')"
+        }
+      },
+      {
+        "time_09@fc_actionbar.objective_time": {
+          "text": "1.6s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G09')"
+        }
+      },
+      {
+        "time_10@fc_actionbar.objective_time": {
+          "text": "1.5s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G10')"
+        }
+      },
+      {
+        "time_11@fc_actionbar.objective_time": {
+          "text": "1.4s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G11')"
+        }
+      },
+      {
+        "time_12@fc_actionbar.objective_time": {
+          "text": "1.2s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G12')"
+        }
+      },
+      {
+        "time_13@fc_actionbar.objective_time": {
+          "text": "1.1s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G13')"
+        }
+      },
+      {
+        "time_14@fc_actionbar.objective_time": {
+          "text": "0.9s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G14')"
+        }
+      },
+      {
+        "time_15@fc_actionbar.objective_time": {
+          "text": "0.8s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G15')"
+        }
+      },
+      {
+        "time_16@fc_actionbar.objective_time": {
+          "text": "0.6s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G16')"
+        }
+      },
+      {
+        "time_17@fc_actionbar.objective_time": {
+          "text": "0.5s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G17')"
+        }
+      },
+      {
+        "time_18@fc_actionbar.objective_time": {
+          "text": "0.3s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G18')"
+        }
+      },
+      {
+        "time_19@fc_actionbar.objective_time": {
+          "text": "0.1s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G19')"
+        }
+      },
+      {
+        "time_20@fc_actionbar.objective_time": {
+          "text": "0.0s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G20')"
+        }
+      },
+      {
+        "frame_00@fc_actionbar.objective_frame_00": {}
+      },
+      {
+        "frame_01@fc_actionbar.objective_frame_01": {}
+      },
+      {
+        "frame_02@fc_actionbar.objective_frame_02": {}
+      },
+      {
+        "frame_03@fc_actionbar.objective_frame_03": {}
+      },
+      {
+        "frame_04@fc_actionbar.objective_frame_04": {}
+      },
+      {
+        "frame_05@fc_actionbar.objective_frame_05": {}
+      },
+      {
+        "frame_06@fc_actionbar.objective_frame_06": {}
+      },
+      {
+        "frame_07@fc_actionbar.objective_frame_07": {}
+      },
+      {
+        "frame_08@fc_actionbar.objective_frame_08": {}
+      },
+      {
+        "frame_09@fc_actionbar.objective_frame_09": {}
+      },
+      {
+        "frame_10@fc_actionbar.objective_frame_10": {}
+      },
+      {
+        "frame_11@fc_actionbar.objective_frame_11": {}
+      },
+      {
+        "frame_12@fc_actionbar.objective_frame_12": {}
+      },
+      {
+        "frame_13@fc_actionbar.objective_frame_13": {}
+      },
+      {
+        "frame_14@fc_actionbar.objective_frame_14": {}
+      },
+      {
+        "frame_15@fc_actionbar.objective_frame_15": {}
+      },
+      {
+        "frame_16@fc_actionbar.objective_frame_16": {}
+      },
+      {
+        "frame_17@fc_actionbar.objective_frame_17": {}
+      },
+      {
+        "frame_18@fc_actionbar.objective_frame_18": {}
+      },
+      {
+        "frame_19@fc_actionbar.objective_frame_19": {}
+      },
+      {
+        "frame_20@fc_actionbar.objective_frame_20": {}
+      }
+    ]
+  },
+  "defuse_hud@fc_actionbar.objective_panel": {
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and (('%.2s' * ($atext - ('%.15s' * $atext))) = 'I2'))",
+    "controls": [
+      {
+        "background@fc_actionbar.objective_background": {}
+      },
+      {
+        "track@fc_actionbar.objective_track": {}
+      },
+      {
+        "icon@fc_actionbar.objective_icon": {
+          "text": ""
+        }
+      },
+      {
+        "action@fc_actionbar.objective_action": {
+          "text": "fps.hud.defuse"
+        }
+      },
+      {
+        "time_00@fc_actionbar.objective_time": {
+          "text": "10.0s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G00')"
+        }
+      },
+      {
+        "time_01@fc_actionbar.objective_time": {
+          "text": "9.5s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G01')"
+        }
+      },
+      {
+        "time_02@fc_actionbar.objective_time": {
+          "text": "9.0s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G02')"
+        }
+      },
+      {
+        "time_03@fc_actionbar.objective_time": {
+          "text": "8.5s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G03')"
+        }
+      },
+      {
+        "time_04@fc_actionbar.objective_time": {
+          "text": "8.0s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G04')"
+        }
+      },
+      {
+        "time_05@fc_actionbar.objective_time": {
+          "text": "7.5s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G05')"
+        }
+      },
+      {
+        "time_06@fc_actionbar.objective_time": {
+          "text": "7.0s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G06')"
+        }
+      },
+      {
+        "time_07@fc_actionbar.objective_time": {
+          "text": "6.5s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G07')"
+        }
+      },
+      {
+        "time_08@fc_actionbar.objective_time": {
+          "text": "6.0s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G08')"
+        }
+      },
+      {
+        "time_09@fc_actionbar.objective_time": {
+          "text": "5.5s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G09')"
+        }
+      },
+      {
+        "time_10@fc_actionbar.objective_time": {
+          "text": "5.0s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G10')"
+        }
+      },
+      {
+        "time_11@fc_actionbar.objective_time": {
+          "text": "4.5s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G11')"
+        }
+      },
+      {
+        "time_12@fc_actionbar.objective_time": {
+          "text": "4.0s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G12')"
+        }
+      },
+      {
+        "time_13@fc_actionbar.objective_time": {
+          "text": "3.5s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G13')"
+        }
+      },
+      {
+        "time_14@fc_actionbar.objective_time": {
+          "text": "3.0s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G14')"
+        }
+      },
+      {
+        "time_15@fc_actionbar.objective_time": {
+          "text": "2.5s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G15')"
+        }
+      },
+      {
+        "time_16@fc_actionbar.objective_time": {
+          "text": "2.0s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G16')"
+        }
+      },
+      {
+        "time_17@fc_actionbar.objective_time": {
+          "text": "1.5s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G17')"
+        }
+      },
+      {
+        "time_18@fc_actionbar.objective_time": {
+          "text": "1.0s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G18')"
+        }
+      },
+      {
+        "time_19@fc_actionbar.objective_time": {
+          "text": "0.5s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G19')"
+        }
+      },
+      {
+        "time_20@fc_actionbar.objective_time": {
+          "text": "0.0s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G20')"
+        }
+      },
+      {
+        "frame_00@fc_actionbar.objective_frame_00": {
+          "color": [
+            0.45,
+            1,
+            0.5
+          ]
+        }
+      },
+      {
+        "frame_01@fc_actionbar.objective_frame_01": {
+          "color": [
+            0.45,
+            1,
+            0.5
+          ]
+        }
+      },
+      {
+        "frame_02@fc_actionbar.objective_frame_02": {
+          "color": [
+            0.45,
+            1,
+            0.5
+          ]
+        }
+      },
+      {
+        "frame_03@fc_actionbar.objective_frame_03": {
+          "color": [
+            0.45,
+            1,
+            0.5
+          ]
+        }
+      },
+      {
+        "frame_04@fc_actionbar.objective_frame_04": {
+          "color": [
+            0.45,
+            1,
+            0.5
+          ]
+        }
+      },
+      {
+        "frame_05@fc_actionbar.objective_frame_05": {
+          "color": [
+            0.45,
+            1,
+            0.5
+          ]
+        }
+      },
+      {
+        "frame_06@fc_actionbar.objective_frame_06": {
+          "color": [
+            0.45,
+            1,
+            0.5
+          ]
+        }
+      },
+      {
+        "frame_07@fc_actionbar.objective_frame_07": {
+          "color": [
+            0.45,
+            1,
+            0.5
+          ]
+        }
+      },
+      {
+        "frame_08@fc_actionbar.objective_frame_08": {
+          "color": [
+            0.45,
+            1,
+            0.5
+          ]
+        }
+      },
+      {
+        "frame_09@fc_actionbar.objective_frame_09": {
+          "color": [
+            0.45,
+            1,
+            0.5
+          ]
+        }
+      },
+      {
+        "frame_10@fc_actionbar.objective_frame_10": {
+          "color": [
+            0.45,
+            1,
+            0.5
+          ]
+        }
+      },
+      {
+        "frame_11@fc_actionbar.objective_frame_11": {
+          "color": [
+            0.45,
+            1,
+            0.5
+          ]
+        }
+      },
+      {
+        "frame_12@fc_actionbar.objective_frame_12": {
+          "color": [
+            0.45,
+            1,
+            0.5
+          ]
+        }
+      },
+      {
+        "frame_13@fc_actionbar.objective_frame_13": {
+          "color": [
+            0.45,
+            1,
+            0.5
+          ]
+        }
+      },
+      {
+        "frame_14@fc_actionbar.objective_frame_14": {
+          "color": [
+            0.45,
+            1,
+            0.5
+          ]
+        }
+      },
+      {
+        "frame_15@fc_actionbar.objective_frame_15": {
+          "color": [
+            0.45,
+            1,
+            0.5
+          ]
+        }
+      },
+      {
+        "frame_16@fc_actionbar.objective_frame_16": {
+          "color": [
+            0.45,
+            1,
+            0.5
+          ]
+        }
+      },
+      {
+        "frame_17@fc_actionbar.objective_frame_17": {
+          "color": [
+            0.45,
+            1,
+            0.5
+          ]
+        }
+      },
+      {
+        "frame_18@fc_actionbar.objective_frame_18": {
+          "color": [
+            0.45,
+            1,
+            0.5
+          ]
+        }
+      },
+      {
+        "frame_19@fc_actionbar.objective_frame_19": {
+          "color": [
+            0.45,
+            1,
+            0.5
+          ]
+        }
+      },
+      {
+        "frame_20@fc_actionbar.objective_frame_20": {
+          "color": [
+            0.45,
+            1,
+            0.5
+          ]
+        }
+      }
+    ]
+  },
+  "defuse_kit_hud@fc_actionbar.objective_panel": {
+    "visible": "(((('%.4s' * $atext) = 'FCAB') and (('%.20s' * $atext) = $atext)) and (('%.2s' * ($atext - ('%.15s' * $atext))) = 'I3'))",
+    "controls": [
+      {
+        "background@fc_actionbar.objective_background": {}
+      },
+      {
+        "track@fc_actionbar.objective_track": {}
+      },
+      {
+        "icon@fc_actionbar.objective_icon": {
+          "text": ""
+        }
+      },
+      {
+        "action@fc_actionbar.objective_action": {
+          "text": "fps.hud.defuse"
+        }
+      },
+      {
+        "time_00@fc_actionbar.objective_time": {
+          "text": "5.0s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G00')"
+        }
+      },
+      {
+        "time_01@fc_actionbar.objective_time": {
+          "text": "4.8s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G01')"
+        }
+      },
+      {
+        "time_02@fc_actionbar.objective_time": {
+          "text": "4.5s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G02')"
+        }
+      },
+      {
+        "time_03@fc_actionbar.objective_time": {
+          "text": "4.3s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G03')"
+        }
+      },
+      {
+        "time_04@fc_actionbar.objective_time": {
+          "text": "4.0s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G04')"
+        }
+      },
+      {
+        "time_05@fc_actionbar.objective_time": {
+          "text": "3.8s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G05')"
+        }
+      },
+      {
+        "time_06@fc_actionbar.objective_time": {
+          "text": "3.5s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G06')"
+        }
+      },
+      {
+        "time_07@fc_actionbar.objective_time": {
+          "text": "3.3s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G07')"
+        }
+      },
+      {
+        "time_08@fc_actionbar.objective_time": {
+          "text": "3.0s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G08')"
+        }
+      },
+      {
+        "time_09@fc_actionbar.objective_time": {
+          "text": "2.8s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G09')"
+        }
+      },
+      {
+        "time_10@fc_actionbar.objective_time": {
+          "text": "2.5s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G10')"
+        }
+      },
+      {
+        "time_11@fc_actionbar.objective_time": {
+          "text": "2.3s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G11')"
+        }
+      },
+      {
+        "time_12@fc_actionbar.objective_time": {
+          "text": "2.0s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G12')"
+        }
+      },
+      {
+        "time_13@fc_actionbar.objective_time": {
+          "text": "1.8s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G13')"
+        }
+      },
+      {
+        "time_14@fc_actionbar.objective_time": {
+          "text": "1.5s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G14')"
+        }
+      },
+      {
+        "time_15@fc_actionbar.objective_time": {
+          "text": "1.3s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G15')"
+        }
+      },
+      {
+        "time_16@fc_actionbar.objective_time": {
+          "text": "1.0s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G16')"
+        }
+      },
+      {
+        "time_17@fc_actionbar.objective_time": {
+          "text": "0.8s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G17')"
+        }
+      },
+      {
+        "time_18@fc_actionbar.objective_time": {
+          "text": "0.5s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G18')"
+        }
+      },
+      {
+        "time_19@fc_actionbar.objective_time": {
+          "text": "0.3s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G19')"
+        }
+      },
+      {
+        "time_20@fc_actionbar.objective_time": {
+          "text": "0.0s",
+          "visible": "(('%.3s' * ($atext - ('%.17s' * $atext))) = 'G20')"
+        }
+      },
+      {
+        "frame_00@fc_actionbar.objective_frame_00": {
+          "color": [
+            0.45,
+            1,
+            0.5
+          ]
+        }
+      },
+      {
+        "frame_01@fc_actionbar.objective_frame_01": {
+          "color": [
+            0.45,
+            1,
+            0.5
+          ]
+        }
+      },
+      {
+        "frame_02@fc_actionbar.objective_frame_02": {
+          "color": [
+            0.45,
+            1,
+            0.5
+          ]
+        }
+      },
+      {
+        "frame_03@fc_actionbar.objective_frame_03": {
+          "color": [
+            0.45,
+            1,
+            0.5
+          ]
+        }
+      },
+      {
+        "frame_04@fc_actionbar.objective_frame_04": {
+          "color": [
+            0.45,
+            1,
+            0.5
+          ]
+        }
+      },
+      {
+        "frame_05@fc_actionbar.objective_frame_05": {
+          "color": [
+            0.45,
+            1,
+            0.5
+          ]
+        }
+      },
+      {
+        "frame_06@fc_actionbar.objective_frame_06": {
+          "color": [
+            0.45,
+            1,
+            0.5
+          ]
+        }
+      },
+      {
+        "frame_07@fc_actionbar.objective_frame_07": {
+          "color": [
+            0.45,
+            1,
+            0.5
+          ]
+        }
+      },
+      {
+        "frame_08@fc_actionbar.objective_frame_08": {
+          "color": [
+            0.45,
+            1,
+            0.5
+          ]
+        }
+      },
+      {
+        "frame_09@fc_actionbar.objective_frame_09": {
+          "color": [
+            0.45,
+            1,
+            0.5
+          ]
+        }
+      },
+      {
+        "frame_10@fc_actionbar.objective_frame_10": {
+          "color": [
+            0.45,
+            1,
+            0.5
+          ]
+        }
+      },
+      {
+        "frame_11@fc_actionbar.objective_frame_11": {
+          "color": [
+            0.45,
+            1,
+            0.5
+          ]
+        }
+      },
+      {
+        "frame_12@fc_actionbar.objective_frame_12": {
+          "color": [
+            0.45,
+            1,
+            0.5
+          ]
+        }
+      },
+      {
+        "frame_13@fc_actionbar.objective_frame_13": {
+          "color": [
+            0.45,
+            1,
+            0.5
+          ]
+        }
+      },
+      {
+        "frame_14@fc_actionbar.objective_frame_14": {
+          "color": [
+            0.45,
+            1,
+            0.5
+          ]
+        }
+      },
+      {
+        "frame_15@fc_actionbar.objective_frame_15": {
+          "color": [
+            0.45,
+            1,
+            0.5
+          ]
+        }
+      },
+      {
+        "frame_16@fc_actionbar.objective_frame_16": {
+          "color": [
+            0.45,
+            1,
+            0.5
+          ]
+        }
+      },
+      {
+        "frame_17@fc_actionbar.objective_frame_17": {
+          "color": [
+            0.45,
+            1,
+            0.5
+          ]
+        }
+      },
+      {
+        "frame_18@fc_actionbar.objective_frame_18": {
+          "color": [
+            0.45,
+            1,
+            0.5
+          ]
+        }
+      },
+      {
+        "frame_19@fc_actionbar.objective_frame_19": {
+          "color": [
+            0.45,
+            1,
+            0.5
+          ]
+        }
+      },
+      {
+        "frame_20@fc_actionbar.objective_frame_20": {
+          "color": [
+            0.45,
+            1,
+            0.5
+          ]
+        }
+      }
+    ]
+  }
+}

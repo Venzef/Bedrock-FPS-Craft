@@ -1,0 +1,55 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "fps:planted_bomb",
+      "is_spawnable": false,
+      "is_summonable": true
+    },
+    "component_groups": {
+      "fps:instant_despawn": {
+        "minecraft:instant_despawn": {}
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": ["fps_planted_bomb"]
+      },
+      "minecraft:collision_box": {
+        "width": 0.75,
+        "height": 0.4
+      },
+      "minecraft:health": {
+        "value": 1,
+        "max": 1
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "all",
+            "deals_damage": false
+          }
+        ]
+      },
+      "minecraft:physics": {
+        "has_collision": false,
+        "has_gravity": false
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1
+      },
+      "minecraft:persistent": {}
+    },
+    "events": {
+      "fps:despawn": {
+        "add": {
+          "component_groups": ["fps:instant_despawn"]
+        }
+      }
+    }
+  }
+}

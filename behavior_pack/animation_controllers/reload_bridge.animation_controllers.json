@@ -1,0 +1,27 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.fps.reload_bridge": {
+      "initial_state": "idle",
+      "states": {
+        "idle": {
+          "transitions": [
+            {
+              "reload": "variable.attack_time > 0.0 && query.is_item_name_any('slot.weapon.mainhand', 'fps:gun_sidearm', 'fps:gun_vector', 'fps:gun_ranger', 'fps:gun_bulldog', 'fps:gun_longshot')"
+            }
+          ]
+        },
+        "reload": {
+          "on_entry": [
+            "/scoreboard players set @s fps_reload 1"
+          ],
+          "transitions": [
+            {
+              "idle": "variable.attack_time == 0.0"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

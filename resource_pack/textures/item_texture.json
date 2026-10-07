@@ -1,0 +1,30 @@
+{
+  "resource_pack_name": "bomb_defusal",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "fps_bomb": {
+      "textures": "textures/blocks/tnt_side"
+    },
+    "fps_gun_sidearm": {
+      "textures": "textures/items/gold_sword"
+    },
+    "fps_gun_vector": {
+      "textures": "textures/items/iron_sword"
+    },
+    "fps_gun_ranger": {
+      "textures": "textures/items/diamond_sword"
+    },
+    "fps_gun_bulldog": {
+      "textures": "textures/items/iron_axe"
+    },
+    "fps_gun_longshot": {
+      "textures": "textures/items/crossbow_standby"
+    },
+    "fps_knife": {
+      "textures": "textures/items/stone_sword"
+    },
+    "fps_scoreboard": {
+      "textures": "textures/items/scoreboard"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.bomb.use_cycle": {
+      "initial_state": "holding",
+      "states": {
+        "holding": {
+          "animations": [
+            { "hold_first_person": "context.is_first_person == 1.0" },
+            { "hold_third_person": "context.is_first_person == 0.0" }
+          ],
+          "transitions": [
+            { "planting": "query.is_using_item" }
+          ]
+        },
+        "planting": {
+          "animations": [
+            { "planting_first_person": "context.is_first_person == 1.0" },
+            { "planting_third_person": "context.is_first_person == 0.0" }
+          ],
+          "transitions": [
+            { "holding": "!query.is_using_item" }
+          ]
+        }
+      }
+    }
+  }
+}

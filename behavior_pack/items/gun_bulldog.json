@@ -1,0 +1,14 @@
+{
+  "format_version": "1.21.100",
+  "minecraft:item": {
+    "description": { "identifier": "fps:gun_bulldog", "menu_category": { "category": "items" } },
+    "components": {
+      "minecraft:display_name": { "value": "item.fps:gun_bulldog.name" },
+      "minecraft:icon": "fps_gun_bulldog",
+      "minecraft:max_stack_size": 1,
+      "minecraft:hand_equipped": true,
+      "minecraft:use_modifiers": { "use_duration": 999, "movement_modifier": 1.0 },
+      "minecraft:use_animation": "bow"
+    }
+  }
+}

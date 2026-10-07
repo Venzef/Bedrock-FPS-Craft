@@ -1,0 +1,142 @@
+{
+  "namespace": "gm_bombdefusal",
+  "render": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "$offset": [ 0, 0 ],
+    "variables": [
+      { "requires": "((not $desktop_screen and not $education_edition) or ($is_android or $is_ios))", "$offset": [ 0, 20 ] }
+    ],
+    "offset": "$offset",
+    "factory": {
+      "name": "hud_title_text_factory",
+      "control_ids": { "hud_title_text": "main@gm_bombdefusal.main" }
+    }
+  },
+  "main@fc.p": {
+    "bindings": [
+      { "binding_name": "#hud_title_text_string" },
+      { "binding_type": "view", "source_property_name": "('%.3s' * #hud_title_text_string)", "target_property_name": "#text_name" },
+      { "binding_type": "view", "source_property_name": "(#text_name = 'TMR')", "target_property_name": "#visible" }
+    ],
+    "controls": [
+      { "top@fc.sp": {
+        "size": [ "100%c", 16 ], "offset": [ 0, 2 ], "orientation": "horizontal",
+        "anchor_from": "top_middle", "anchor_to": "top_middle",
+        "controls": [
+          { "defender_team@gm_bombdefusal.defender_team": {} },
+          { "pad@fc.p": { "size": [ 2, 16 ] } },
+          { "center_block@gm_bombdefusal.center_block": {} },
+          { "pad@fc.p": { "size": [ 2, 16 ] } },
+          { "attacker_team@gm_bombdefusal.attacker_team": {} }
+        ]
+      } }
+    ]
+  },
+  "player_slot@fc.p": {
+    "size": [ 16, 0 ], "$name_at|default": 12, "$portrait_texture|default": "textures/ui/team_attacker_player",
+    "controls": [
+      { "alive@fc.img": {
+        "texture": "$portrait_texture", "size": [ 12, 12 ], "offset": [ 0, 6 ], "layer": 4,
+        "bindings": [
+          { "binding_name": "#hud_title_text_string" },
+          { "binding_type": "view", "source_property_name": "(('%.3s' * (#hud_title_text_string - (('%.' + $name_at + 's') * #hud_title_text_string))) = 'PLA')", "target_property_name": "#visible" }
+        ]
+      } },
+      { "dead@fc.img": {
+        "texture": "$portrait_texture", "size": [ 12, 12 ], "offset": [ 0, 6 ], "layer": 4,
+        "controls": [
+          { "crossed@fc.img": { "texture": "textures/blocks/barrier", "size": [ 16, 16 ], "layer": 1 } }
+        ],
+        "bindings": [
+          { "binding_name": "#hud_title_text_string" },
+          { "binding_type": "view", "source_property_name": "(('%.3s' * (#hud_title_text_string - (('%.' + $name_at + 's') * #hud_title_text_string))) = 'PLD')", "target_property_name": "#visible" }
+        ]
+      } },
+      { "unavailable@fc.img": {
+        "texture": "textures/blocks/barrier", "size": [ 12, 12 ], "offset": [ 0, 6 ], "layer": 5,
+        "bindings": [
+          { "binding_name": "#hud_title_text_string" },
+          { "binding_type": "view", "source_property_name": "(('%.3s' * (#hud_title_text_string - (('%.' + $name_at + 's') * #hud_title_text_string))) = 'PLN')", "target_property_name": "#visible" }
+        ]
+      } }
+    ]
+  },
+  "defender_team@fc.img": {
+    "alpha": 0.8, "anchor_from": "right_middle", "anchor_to": "right_middle",
+    "texture": "textures/ui/hud_tip_text_background", "size": [ "100%c", 16 ],
+    "controls": [ { "stack@fc.sp": { "orientation": "horizontal", "size": [ "100%c", 12 ], "controls": [
+      { "first@gm_bombdefusal.player_slot": { "$name_at": 107, "$portrait_texture": "textures/ui/team_defender_player" } },
+      { "second@gm_bombdefusal.player_slot": { "$name_at": 126, "$portrait_texture": "textures/ui/team_defender_player" } },
+      { "third@gm_bombdefusal.player_slot": { "$name_at": 145, "$portrait_texture": "textures/ui/team_defender_player" } },
+      { "fourth@gm_bombdefusal.player_slot": { "$name_at": 164, "$portrait_texture": "textures/ui/team_defender_player" } },
+      { "fifth@gm_bombdefusal.player_slot": { "$name_at": 183, "$portrait_texture": "textures/ui/team_defender_player" } }
+    ] } } ]
+  },
+  "attacker_team@fc.img": {
+    "alpha": 0.8, "anchor_from": "left_middle", "anchor_to": "left_middle",
+    "texture": "textures/ui/hud_tip_text_background", "size": [ "100%c", 16 ],
+    "controls": [ { "stack@fc.sp": { "orientation": "horizontal", "size": [ "100%c", 12 ], "controls": [
+      { "first@gm_bombdefusal.player_slot": { "$name_at": 12, "$portrait_texture": "textures/ui/team_attacker_player" } },
+      { "second@gm_bombdefusal.player_slot": { "$name_at": 31, "$portrait_texture": "textures/ui/team_attacker_player" } },
+      { "third@gm_bombdefusal.player_slot": { "$name_at": 50, "$portrait_texture": "textures/ui/team_attacker_player" } },
+      { "fourth@gm_bombdefusal.player_slot": { "$name_at": 69, "$portrait_texture": "textures/ui/team_attacker_player" } },
+      { "fifth@gm_bombdefusal.player_slot": { "$name_at": 88, "$portrait_texture": "textures/ui/team_attacker_player" } }
+    ] } } ]
+  },
+  "timer@fc.img": {
+    "$font_scale|default": 1, "alpha": 0.4, "texture": "textures/ui/hud_tip_text_background", "size": [ "100%c + 6px", "100%c" ],
+    "controls": [
+      { "timer_text@fc.l": {
+        "font_scale_factor": "$font_scale", "layer": 2, "shadow": true, "text": "#timer_insides",
+        "bindings": [
+          { "binding_name": "#hud_title_text_string" },
+          { "binding_type": "view", "source_property_name": "('%.8s' * #hud_title_text_string)", "target_property_name": "#timer_whole" },
+          { "binding_type": "view", "source_property_name": "(('§r' + #timer_whole) - 'TMR')", "target_property_name": "#timer_insides" },
+          { "binding_type": "view", "source_property_name": "(not ((#timer_whole = 'TMRBPLNT') or (#timer_whole = 'TMRBDEFS')))", "target_property_name": "#visible" }
+        ]
+      } },
+      { "planted_text@fc.l": {
+        "font_scale_factor": "$font_scale", "layer": 2, "shadow": true, "text": "\uE108",
+        "bindings": [
+          { "binding_name": "#hud_title_text_string" },
+          { "binding_type": "view", "source_property_name": "(('%.8s' * #hud_title_text_string) = 'TMRBPLNT')", "target_property_name": "#visible" }
+        ]
+      } },
+      { "defused_text@fc.l": {
+        "font_scale_factor": "$font_scale", "layer": 2, "shadow": true, "text": "\uE109",
+        "bindings": [
+          { "binding_name": "#hud_title_text_string" },
+          { "binding_type": "view", "source_property_name": "(('%.8s' * #hud_title_text_string) = 'TMRBDEFS')", "target_property_name": "#visible" }
+        ]
+      } }
+    ]
+  },
+  "attacker_score@fc.img": {
+    "alpha": 0.4, "texture": "textures/ui/hud_tip_text_background", "size": [ 17, 8 ],
+    "controls": [ { "score@fc.l": { "text": "#attacker_score_text", "shadow": true, "bindings": [
+      { "binding_name": "#hud_title_text_string" },
+      { "binding_type": "view", "source_property_name": "('%.2s' * (#hud_title_text_string - ('%.8s' * #hud_title_text_string)))", "target_property_name": "#attacker_score_whole" },
+      { "binding_type": "view", "source_property_name": "(('§c' + #attacker_score_whole) - 'A')", "target_property_name": "#attacker_score_text" }
+    ] } } ]
+  },
+  "defender_score@fc.img": {
+    "alpha": 0.4, "texture": "textures/ui/hud_tip_text_background", "size": [ 17, 8 ],
+    "controls": [ { "score@fc.l": { "text": "#defender_score_text", "shadow": true, "bindings": [
+      { "binding_name": "#hud_title_text_string" },
+      { "binding_type": "view", "source_property_name": "('%.2s' * (#hud_title_text_string - ('%.10s' * #hud_title_text_string)))", "target_property_name": "#defender_score_whole" },
+      { "binding_type": "view", "source_property_name": "(('§b' + #defender_score_whole) - 'D')", "target_property_name": "#defender_score_text" }
+    ] } } ]
+  },
+  "center_block@fc.p": {
+    "size": [ 36, 16 ],
+    "controls": [
+      { "timer@gm_bombdefusal.timer": { "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 0 ], "size": [ 35, 8 ], "$font_scale": 0.8 } },
+      { "score_row@fc.sp": { "orientation": "horizontal", "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [ 0, 9 ], "size": [ 35, 7 ],
+        "controls": [ { "defender@gm_bombdefusal.defender_score": {} }, { "pad@fc.p": { "size": [ 1, 8 ] } }, { "attacker@gm_bombdefusal.attacker_score": {} } ]
+      } }
+    ]
+  }
+}

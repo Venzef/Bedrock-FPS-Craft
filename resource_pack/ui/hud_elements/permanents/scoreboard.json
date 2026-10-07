@@ -1,0 +1,2573 @@
+{
+  "namespace": "fps_scoreboard",
+  "render": {
+    "type": "panel",
+    "size": [
+      "94%",
+      "58%"
+    ],
+    "max_size": [
+      760,
+      190
+    ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "layer": 100,
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(('%.3s' * (#hud_title_text_string - (('%.' + (202) + 's') * #hud_title_text_string))) = 'SB1')",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "background": {
+          "type": "image",
+          "texture": "textures/ui/Black",
+          "alpha": 0.68,
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 0
+        }
+      },
+      {
+        "ct": {
+          "type": "panel",
+          "size": [
+            "49.5%",
+            "100%"
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "$role_code": "C",
+          "$portrait": "textures/ui/team_defender_player",
+          "controls": [
+            {
+              "accent": {
+                "type": "image",
+                "texture": "textures/ui/scoreboard_white",
+                "color": [
+                  0.35,
+                  0.65,
+                  1
+                ],
+                "size": [
+                  "100%",
+                  2
+                ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left"
+              }
+            },
+            {
+              "team_name": {
+                "type": "label",
+                "text": "fps.scoreboard.ct",
+                "localize": true,
+                "shadow": false,
+                "font_scale_factor": 1,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [
+                  "3%",
+                  "5%"
+                ],
+                "size": [
+                  "65%",
+                  14
+                ],
+                "text_alignment": "left",
+                "layer": 3,
+                "color": [
+                  0.35,
+                  0.65,
+                  1
+                ]
+              }
+            },
+            {
+              "score": {
+                "type": "label",
+                "text": "#score",
+                "localize": false,
+                "shadow": false,
+                "font_scale_factor": 1.5,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [
+                  "79%",
+                  "4%"
+                ],
+                "size": [
+                  "18%",
+                  14
+                ],
+                "text_alignment": "center",
+                "layer": 3,
+                "color": [
+                  0.35,
+                  0.65,
+                  1
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#hud_title_text_string"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "('%.2s' * (#hud_title_text_string - (('%.' + (206) + 's') * #hud_title_text_string)))",
+                    "target_property_name": "#score"
+                  }
+                ]
+              }
+            },
+            {
+              "allied_header": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  14
+                ],
+                "offset": [
+                  0,
+                  "20%"
+                ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "bindings": [
+                  {
+                    "binding_name": "#hud_title_text_string"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(('%.1s' * (#hud_title_text_string - (('%.' + (205) + 's') * #hud_title_text_string))) = $role_code)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "rank": {
+                      "type": "label",
+                      "text": "#",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "1%",
+                        0
+                      ],
+                      "size": [
+                        "5%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "color": [
+                        0.64,
+                        0.68,
+                        0.73
+                      ]
+                    }
+                  },
+                  {
+                    "name": {
+                      "type": "label",
+                      "text": "fps.scoreboard.name",
+                      "localize": true,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "15%",
+                        0
+                      ],
+                      "size": [
+                        "39%",
+                        14
+                      ],
+                      "text_alignment": "left",
+                      "layer": 3,
+                      "color": [
+                        0.64,
+                        0.68,
+                        0.73
+                      ]
+                    }
+                  },
+                  {
+                    "kills": {
+                      "type": "label",
+                      "text": "K",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "54%",
+                        0
+                      ],
+                      "size": [
+                        "10%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "color": [
+                        0.64,
+                        0.68,
+                        0.73
+                      ]
+                    }
+                  },
+                  {
+                    "deaths": {
+                      "type": "label",
+                      "text": "D",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "64%",
+                        0
+                      ],
+                      "size": [
+                        "10%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "color": [
+                        0.64,
+                        0.68,
+                        0.73
+                      ]
+                    }
+                  },
+                  {
+                    "assists": {
+                      "type": "label",
+                      "text": "A",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "74%",
+                        0
+                      ],
+                      "size": [
+                        "10%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "color": [
+                        0.64,
+                        0.68,
+                        0.73
+                      ]
+                    }
+                  },
+                  {
+                    "money": {
+                      "type": "label",
+                      "text": "fps.scoreboard.money",
+                      "localize": true,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "84%",
+                        0
+                      ],
+                      "size": [
+                        "16%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "color": [
+                        0.64,
+                        0.68,
+                        0.73
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "opponent_header": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  14
+                ],
+                "offset": [
+                  0,
+                  "20%"
+                ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "bindings": [
+                  {
+                    "binding_name": "#hud_title_text_string"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(not (('%.1s' * (#hud_title_text_string - (('%.' + (205) + 's') * #hud_title_text_string))) = $role_code))",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "rank": {
+                      "type": "label",
+                      "text": "#",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "1%",
+                        0
+                      ],
+                      "size": [
+                        "5%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "color": [
+                        0.64,
+                        0.68,
+                        0.73
+                      ]
+                    }
+                  },
+                  {
+                    "name": {
+                      "type": "label",
+                      "text": "fps.scoreboard.name",
+                      "localize": true,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "15%",
+                        0
+                      ],
+                      "size": [
+                        "49%",
+                        14
+                      ],
+                      "text_alignment": "left",
+                      "layer": 3,
+                      "color": [
+                        0.64,
+                        0.68,
+                        0.73
+                      ]
+                    }
+                  },
+                  {
+                    "kills": {
+                      "type": "label",
+                      "text": "K",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "64%",
+                        0
+                      ],
+                      "size": [
+                        "10%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "color": [
+                        0.64,
+                        0.68,
+                        0.73
+                      ]
+                    }
+                  },
+                  {
+                    "deaths": {
+                      "type": "label",
+                      "text": "D",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "76%",
+                        0
+                      ],
+                      "size": [
+                        "10%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "color": [
+                        0.64,
+                        0.68,
+                        0.73
+                      ]
+                    }
+                  },
+                  {
+                    "assists": {
+                      "type": "label",
+                      "text": "A",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "88%",
+                        0
+                      ],
+                      "size": [
+                        "10%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "color": [
+                        0.64,
+                        0.68,
+                        0.73
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row_0@fps_scoreboard.row": {
+                "$row_at": 210,
+                "offset": [
+                  0,
+                  "29%"
+                ]
+              }
+            },
+            {
+              "row_1@fps_scoreboard.row": {
+                "$row_at": 258,
+                "offset": [
+                  0,
+                  "43%"
+                ]
+              }
+            },
+            {
+              "row_2@fps_scoreboard.row": {
+                "$row_at": 306,
+                "offset": [
+                  0,
+                  "57%"
+                ]
+              }
+            },
+            {
+              "row_3@fps_scoreboard.row": {
+                "$row_at": 354,
+                "offset": [
+                  0,
+                  "71%"
+                ]
+              }
+            },
+            {
+              "row_4@fps_scoreboard.row": {
+                "$row_at": 402,
+                "offset": [
+                  0,
+                  "85%"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "t": {
+          "type": "panel",
+          "size": [
+            "49.5%",
+            "100%"
+          ],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "$role_code": "T",
+          "$portrait": "textures/ui/team_attacker_player",
+          "controls": [
+            {
+              "accent": {
+                "type": "image",
+                "texture": "textures/ui/scoreboard_white",
+                "color": [
+                  1,
+                  0.59,
+                  0.24
+                ],
+                "size": [
+                  "100%",
+                  2
+                ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left"
+              }
+            },
+            {
+              "team_name": {
+                "type": "label",
+                "text": "fps.scoreboard.t",
+                "localize": true,
+                "shadow": false,
+                "font_scale_factor": 1,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [
+                  "32%",
+                  "5%"
+                ],
+                "size": [
+                  "65%",
+                  14
+                ],
+                "text_alignment": "right",
+                "layer": 3,
+                "color": [
+                  1,
+                  0.59,
+                  0.24
+                ]
+              }
+            },
+            {
+              "score": {
+                "type": "label",
+                "text": "#score",
+                "localize": false,
+                "shadow": false,
+                "font_scale_factor": 1.5,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [
+                  "3%",
+                  "4%"
+                ],
+                "size": [
+                  "18%",
+                  14
+                ],
+                "text_alignment": "center",
+                "layer": 3,
+                "color": [
+                  1,
+                  0.59,
+                  0.24
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#hud_title_text_string"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "('%.2s' * (#hud_title_text_string - (('%.' + (208) + 's') * #hud_title_text_string)))",
+                    "target_property_name": "#score"
+                  }
+                ]
+              }
+            },
+            {
+              "allied_header": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  14
+                ],
+                "offset": [
+                  0,
+                  "20%"
+                ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "bindings": [
+                  {
+                    "binding_name": "#hud_title_text_string"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(('%.1s' * (#hud_title_text_string - (('%.' + (205) + 's') * #hud_title_text_string))) = $role_code)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "rank": {
+                      "type": "label",
+                      "text": "#",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "1%",
+                        0
+                      ],
+                      "size": [
+                        "5%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "color": [
+                        0.64,
+                        0.68,
+                        0.73
+                      ]
+                    }
+                  },
+                  {
+                    "name": {
+                      "type": "label",
+                      "text": "fps.scoreboard.name",
+                      "localize": true,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "15%",
+                        0
+                      ],
+                      "size": [
+                        "39%",
+                        14
+                      ],
+                      "text_alignment": "left",
+                      "layer": 3,
+                      "color": [
+                        0.64,
+                        0.68,
+                        0.73
+                      ]
+                    }
+                  },
+                  {
+                    "kills": {
+                      "type": "label",
+                      "text": "K",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "54%",
+                        0
+                      ],
+                      "size": [
+                        "10%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "color": [
+                        0.64,
+                        0.68,
+                        0.73
+                      ]
+                    }
+                  },
+                  {
+                    "deaths": {
+                      "type": "label",
+                      "text": "D",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "64%",
+                        0
+                      ],
+                      "size": [
+                        "10%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "color": [
+                        0.64,
+                        0.68,
+                        0.73
+                      ]
+                    }
+                  },
+                  {
+                    "assists": {
+                      "type": "label",
+                      "text": "A",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "74%",
+                        0
+                      ],
+                      "size": [
+                        "10%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "color": [
+                        0.64,
+                        0.68,
+                        0.73
+                      ]
+                    }
+                  },
+                  {
+                    "money": {
+                      "type": "label",
+                      "text": "fps.scoreboard.money",
+                      "localize": true,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "84%",
+                        0
+                      ],
+                      "size": [
+                        "16%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "color": [
+                        0.64,
+                        0.68,
+                        0.73
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "opponent_header": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  14
+                ],
+                "offset": [
+                  0,
+                  "20%"
+                ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "bindings": [
+                  {
+                    "binding_name": "#hud_title_text_string"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(not (('%.1s' * (#hud_title_text_string - (('%.' + (205) + 's') * #hud_title_text_string))) = $role_code))",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "rank": {
+                      "type": "label",
+                      "text": "#",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "1%",
+                        0
+                      ],
+                      "size": [
+                        "5%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "color": [
+                        0.64,
+                        0.68,
+                        0.73
+                      ]
+                    }
+                  },
+                  {
+                    "name": {
+                      "type": "label",
+                      "text": "fps.scoreboard.name",
+                      "localize": true,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "15%",
+                        0
+                      ],
+                      "size": [
+                        "49%",
+                        14
+                      ],
+                      "text_alignment": "left",
+                      "layer": 3,
+                      "color": [
+                        0.64,
+                        0.68,
+                        0.73
+                      ]
+                    }
+                  },
+                  {
+                    "kills": {
+                      "type": "label",
+                      "text": "K",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "64%",
+                        0
+                      ],
+                      "size": [
+                        "10%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "color": [
+                        0.64,
+                        0.68,
+                        0.73
+                      ]
+                    }
+                  },
+                  {
+                    "deaths": {
+                      "type": "label",
+                      "text": "D",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "76%",
+                        0
+                      ],
+                      "size": [
+                        "10%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "color": [
+                        0.64,
+                        0.68,
+                        0.73
+                      ]
+                    }
+                  },
+                  {
+                    "assists": {
+                      "type": "label",
+                      "text": "A",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "88%",
+                        0
+                      ],
+                      "size": [
+                        "10%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "color": [
+                        0.64,
+                        0.68,
+                        0.73
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row_0@fps_scoreboard.row": {
+                "$row_at": 450,
+                "offset": [
+                  0,
+                  "29%"
+                ]
+              }
+            },
+            {
+              "row_1@fps_scoreboard.row": {
+                "$row_at": 498,
+                "offset": [
+                  0,
+                  "43%"
+                ]
+              }
+            },
+            {
+              "row_2@fps_scoreboard.row": {
+                "$row_at": 546,
+                "offset": [
+                  0,
+                  "57%"
+                ]
+              }
+            },
+            {
+              "row_3@fps_scoreboard.row": {
+                "$row_at": 594,
+                "offset": [
+                  0,
+                  "71%"
+                ]
+              }
+            },
+            {
+              "row_4@fps_scoreboard.row": {
+                "$row_at": 642,
+                "offset": [
+                  0,
+                  "85%"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "row": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "14%"
+    ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not (('%.1s' * (#hud_title_text_string - (('%.' + ($row_at + 0) + 's') * #hud_title_text_string))) = 'N'))",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "self_background": {
+          "type": "image",
+          "texture": "textures/ui/scoreboard_white",
+          "alpha": 0.19,
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 1,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((('%.1s' * (#hud_title_text_string - (('%.' + ($row_at + 0) + 's') * #hud_title_text_string))) = 'S') or (('%.1s' * (#hud_title_text_string - (('%.' + ($row_at + 0) + 's') * #hud_title_text_string))) = 'X'))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "dead_background": {
+          "type": "image",
+          "texture": "textures/ui/Black",
+          "alpha": 0.35,
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 2,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((('%.1s' * (#hud_title_text_string - (('%.' + ($row_at + 0) + 's') * #hud_title_text_string))) = 'D') or (('%.1s' * (#hud_title_text_string - (('%.' + ($row_at + 0) + 's') * #hud_title_text_string))) = 'X'))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "alive": {
+          "type": "panel",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(('%.1s' * (#hud_title_text_string - (('%.' + ($row_at + 0) + 's') * #hud_title_text_string))) = 'A')",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "allied": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#hud_title_text_string"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(('%.1s' * (#hud_title_text_string - (('%.' + (205) + 's') * #hud_title_text_string))) = $role_code)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "icon": {
+                      "type": "image",
+                      "texture": "$portrait",
+                      "size": [
+                        11,
+                        11
+                      ],
+                      "offset": [
+                        "8%",
+                        1
+                      ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "layer": 3,
+                      "color": [
+                        0.8,
+                        0.85,
+                        0.9
+                      ]
+                    }
+                  },
+                  {
+                    "rank": {
+                      "type": "label",
+                      "text": "#cell",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "1%",
+                        0
+                      ],
+                      "size": [
+                        "5%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "bindings": [
+                        {
+                          "binding_name": "#hud_title_text_string"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "('%.1s' * (#hud_title_text_string - (('%.' + ($row_at + 1) + 's') * #hud_title_text_string)))",
+                          "target_property_name": "#cell"
+                        }
+                      ],
+                      "color": [
+                        0.8,
+                        0.85,
+                        0.9
+                      ]
+                    }
+                  },
+                  {
+                    "name": {
+                      "type": "label",
+                      "text": "#cell",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "15%",
+                        0
+                      ],
+                      "size": [
+                        "39%",
+                        14
+                      ],
+                      "text_alignment": "left",
+                      "layer": 3,
+                      "bindings": [
+                        {
+                          "binding_name": "#hud_title_text_string"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "('%.32s' * (#hud_title_text_string - (('%.' + ($row_at + 2) + 's') * #hud_title_text_string)))",
+                          "target_property_name": "#cell"
+                        }
+                      ],
+                      "color": [
+                        0.8,
+                        0.85,
+                        0.9
+                      ]
+                    }
+                  },
+                  {
+                    "kills": {
+                      "type": "label",
+                      "text": "#cell",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "54%",
+                        0
+                      ],
+                      "size": [
+                        "10%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "bindings": [
+                        {
+                          "binding_name": "#hud_title_text_string"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "('%.3s' * (#hud_title_text_string - (('%.' + ($row_at + 34) + 's') * #hud_title_text_string)))",
+                          "target_property_name": "#cell"
+                        }
+                      ],
+                      "color": [
+                        0.8,
+                        0.85,
+                        0.9
+                      ]
+                    }
+                  },
+                  {
+                    "deaths": {
+                      "type": "label",
+                      "text": "#cell",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "64%",
+                        0
+                      ],
+                      "size": [
+                        "10%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "bindings": [
+                        {
+                          "binding_name": "#hud_title_text_string"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "('%.3s' * (#hud_title_text_string - (('%.' + ($row_at + 37) + 's') * #hud_title_text_string)))",
+                          "target_property_name": "#cell"
+                        }
+                      ],
+                      "color": [
+                        0.8,
+                        0.85,
+                        0.9
+                      ]
+                    }
+                  },
+                  {
+                    "assists": {
+                      "type": "label",
+                      "text": "#cell",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "74%",
+                        0
+                      ],
+                      "size": [
+                        "10%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "bindings": [
+                        {
+                          "binding_name": "#hud_title_text_string"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "('%.3s' * (#hud_title_text_string - (('%.' + ($row_at + 40) + 's') * #hud_title_text_string)))",
+                          "target_property_name": "#cell"
+                        }
+                      ],
+                      "color": [
+                        0.8,
+                        0.85,
+                        0.9
+                      ]
+                    }
+                  },
+                  {
+                    "money": {
+                      "type": "label",
+                      "text": "#cell",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "84%",
+                        0
+                      ],
+                      "size": [
+                        "16%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "bindings": [
+                        {
+                          "binding_name": "#hud_title_text_string"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "('%.5s' * (#hud_title_text_string - (('%.' + ($row_at + 43) + 's') * #hud_title_text_string)))",
+                          "target_property_name": "#cell"
+                        }
+                      ],
+                      "color": [
+                        0.8,
+                        0.85,
+                        0.9
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "opponent": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#hud_title_text_string"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(not (('%.1s' * (#hud_title_text_string - (('%.' + (205) + 's') * #hud_title_text_string))) = $role_code))",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "icon": {
+                      "type": "image",
+                      "texture": "$portrait",
+                      "size": [
+                        11,
+                        11
+                      ],
+                      "offset": [
+                        "8%",
+                        1
+                      ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "layer": 3,
+                      "color": [
+                        0.8,
+                        0.85,
+                        0.9
+                      ]
+                    }
+                  },
+                  {
+                    "rank": {
+                      "type": "label",
+                      "text": "#cell",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "1%",
+                        0
+                      ],
+                      "size": [
+                        "5%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "bindings": [
+                        {
+                          "binding_name": "#hud_title_text_string"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "('%.1s' * (#hud_title_text_string - (('%.' + ($row_at + 1) + 's') * #hud_title_text_string)))",
+                          "target_property_name": "#cell"
+                        }
+                      ],
+                      "color": [
+                        0.8,
+                        0.85,
+                        0.9
+                      ]
+                    }
+                  },
+                  {
+                    "name": {
+                      "type": "label",
+                      "text": "#cell",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "15%",
+                        0
+                      ],
+                      "size": [
+                        "49%",
+                        14
+                      ],
+                      "text_alignment": "left",
+                      "layer": 3,
+                      "bindings": [
+                        {
+                          "binding_name": "#hud_title_text_string"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "('%.32s' * (#hud_title_text_string - (('%.' + ($row_at + 2) + 's') * #hud_title_text_string)))",
+                          "target_property_name": "#cell"
+                        }
+                      ],
+                      "color": [
+                        0.8,
+                        0.85,
+                        0.9
+                      ]
+                    }
+                  },
+                  {
+                    "kills": {
+                      "type": "label",
+                      "text": "#cell",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "64%",
+                        0
+                      ],
+                      "size": [
+                        "10%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "bindings": [
+                        {
+                          "binding_name": "#hud_title_text_string"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "('%.3s' * (#hud_title_text_string - (('%.' + ($row_at + 34) + 's') * #hud_title_text_string)))",
+                          "target_property_name": "#cell"
+                        }
+                      ],
+                      "color": [
+                        0.8,
+                        0.85,
+                        0.9
+                      ]
+                    }
+                  },
+                  {
+                    "deaths": {
+                      "type": "label",
+                      "text": "#cell",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "76%",
+                        0
+                      ],
+                      "size": [
+                        "10%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "bindings": [
+                        {
+                          "binding_name": "#hud_title_text_string"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "('%.3s' * (#hud_title_text_string - (('%.' + ($row_at + 37) + 's') * #hud_title_text_string)))",
+                          "target_property_name": "#cell"
+                        }
+                      ],
+                      "color": [
+                        0.8,
+                        0.85,
+                        0.9
+                      ]
+                    }
+                  },
+                  {
+                    "assists": {
+                      "type": "label",
+                      "text": "#cell",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "88%",
+                        0
+                      ],
+                      "size": [
+                        "10%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "bindings": [
+                        {
+                          "binding_name": "#hud_title_text_string"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "('%.3s' * (#hud_title_text_string - (('%.' + ($row_at + 40) + 's') * #hud_title_text_string)))",
+                          "target_property_name": "#cell"
+                        }
+                      ],
+                      "color": [
+                        0.8,
+                        0.85,
+                        0.9
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "dead": {
+          "type": "panel",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(('%.1s' * (#hud_title_text_string - (('%.' + ($row_at + 0) + 's') * #hud_title_text_string))) = 'D')",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "allied": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#hud_title_text_string"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(('%.1s' * (#hud_title_text_string - (('%.' + (205) + 's') * #hud_title_text_string))) = $role_code)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "icon": {
+                      "type": "image",
+                      "texture": "$portrait",
+                      "size": [
+                        11,
+                        11
+                      ],
+                      "offset": [
+                        "8%",
+                        1
+                      ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "layer": 3,
+                      "color": [
+                        0.38,
+                        0.42,
+                        0.47
+                      ]
+                    }
+                  },
+                  {
+                    "rank": {
+                      "type": "label",
+                      "text": "#cell",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "1%",
+                        0
+                      ],
+                      "size": [
+                        "5%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "bindings": [
+                        {
+                          "binding_name": "#hud_title_text_string"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "('%.1s' * (#hud_title_text_string - (('%.' + ($row_at + 1) + 's') * #hud_title_text_string)))",
+                          "target_property_name": "#cell"
+                        }
+                      ],
+                      "color": [
+                        0.38,
+                        0.42,
+                        0.47
+                      ]
+                    }
+                  },
+                  {
+                    "name": {
+                      "type": "label",
+                      "text": "#cell",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "15%",
+                        0
+                      ],
+                      "size": [
+                        "39%",
+                        14
+                      ],
+                      "text_alignment": "left",
+                      "layer": 3,
+                      "bindings": [
+                        {
+                          "binding_name": "#hud_title_text_string"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "('%.32s' * (#hud_title_text_string - (('%.' + ($row_at + 2) + 's') * #hud_title_text_string)))",
+                          "target_property_name": "#cell"
+                        }
+                      ],
+                      "color": [
+                        0.38,
+                        0.42,
+                        0.47
+                      ]
+                    }
+                  },
+                  {
+                    "kills": {
+                      "type": "label",
+                      "text": "#cell",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "54%",
+                        0
+                      ],
+                      "size": [
+                        "10%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "bindings": [
+                        {
+                          "binding_name": "#hud_title_text_string"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "('%.3s' * (#hud_title_text_string - (('%.' + ($row_at + 34) + 's') * #hud_title_text_string)))",
+                          "target_property_name": "#cell"
+                        }
+                      ],
+                      "color": [
+                        0.38,
+                        0.42,
+                        0.47
+                      ]
+                    }
+                  },
+                  {
+                    "deaths": {
+                      "type": "label",
+                      "text": "#cell",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "64%",
+                        0
+                      ],
+                      "size": [
+                        "10%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "bindings": [
+                        {
+                          "binding_name": "#hud_title_text_string"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "('%.3s' * (#hud_title_text_string - (('%.' + ($row_at + 37) + 's') * #hud_title_text_string)))",
+                          "target_property_name": "#cell"
+                        }
+                      ],
+                      "color": [
+                        0.38,
+                        0.42,
+                        0.47
+                      ]
+                    }
+                  },
+                  {
+                    "assists": {
+                      "type": "label",
+                      "text": "#cell",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "74%",
+                        0
+                      ],
+                      "size": [
+                        "10%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "bindings": [
+                        {
+                          "binding_name": "#hud_title_text_string"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "('%.3s' * (#hud_title_text_string - (('%.' + ($row_at + 40) + 's') * #hud_title_text_string)))",
+                          "target_property_name": "#cell"
+                        }
+                      ],
+                      "color": [
+                        0.38,
+                        0.42,
+                        0.47
+                      ]
+                    }
+                  },
+                  {
+                    "money": {
+                      "type": "label",
+                      "text": "#cell",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "84%",
+                        0
+                      ],
+                      "size": [
+                        "16%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "bindings": [
+                        {
+                          "binding_name": "#hud_title_text_string"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "('%.5s' * (#hud_title_text_string - (('%.' + ($row_at + 43) + 's') * #hud_title_text_string)))",
+                          "target_property_name": "#cell"
+                        }
+                      ],
+                      "color": [
+                        0.38,
+                        0.42,
+                        0.47
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "opponent": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#hud_title_text_string"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(not (('%.1s' * (#hud_title_text_string - (('%.' + (205) + 's') * #hud_title_text_string))) = $role_code))",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "icon": {
+                      "type": "image",
+                      "texture": "$portrait",
+                      "size": [
+                        11,
+                        11
+                      ],
+                      "offset": [
+                        "8%",
+                        1
+                      ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "layer": 3,
+                      "color": [
+                        0.38,
+                        0.42,
+                        0.47
+                      ]
+                    }
+                  },
+                  {
+                    "rank": {
+                      "type": "label",
+                      "text": "#cell",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "1%",
+                        0
+                      ],
+                      "size": [
+                        "5%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "bindings": [
+                        {
+                          "binding_name": "#hud_title_text_string"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "('%.1s' * (#hud_title_text_string - (('%.' + ($row_at + 1) + 's') * #hud_title_text_string)))",
+                          "target_property_name": "#cell"
+                        }
+                      ],
+                      "color": [
+                        0.38,
+                        0.42,
+                        0.47
+                      ]
+                    }
+                  },
+                  {
+                    "name": {
+                      "type": "label",
+                      "text": "#cell",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "15%",
+                        0
+                      ],
+                      "size": [
+                        "49%",
+                        14
+                      ],
+                      "text_alignment": "left",
+                      "layer": 3,
+                      "bindings": [
+                        {
+                          "binding_name": "#hud_title_text_string"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "('%.32s' * (#hud_title_text_string - (('%.' + ($row_at + 2) + 's') * #hud_title_text_string)))",
+                          "target_property_name": "#cell"
+                        }
+                      ],
+                      "color": [
+                        0.38,
+                        0.42,
+                        0.47
+                      ]
+                    }
+                  },
+                  {
+                    "kills": {
+                      "type": "label",
+                      "text": "#cell",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "64%",
+                        0
+                      ],
+                      "size": [
+                        "10%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "bindings": [
+                        {
+                          "binding_name": "#hud_title_text_string"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "('%.3s' * (#hud_title_text_string - (('%.' + ($row_at + 34) + 's') * #hud_title_text_string)))",
+                          "target_property_name": "#cell"
+                        }
+                      ],
+                      "color": [
+                        0.38,
+                        0.42,
+                        0.47
+                      ]
+                    }
+                  },
+                  {
+                    "deaths": {
+                      "type": "label",
+                      "text": "#cell",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "76%",
+                        0
+                      ],
+                      "size": [
+                        "10%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "bindings": [
+                        {
+                          "binding_name": "#hud_title_text_string"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "('%.3s' * (#hud_title_text_string - (('%.' + ($row_at + 37) + 's') * #hud_title_text_string)))",
+                          "target_property_name": "#cell"
+                        }
+                      ],
+                      "color": [
+                        0.38,
+                        0.42,
+                        0.47
+                      ]
+                    }
+                  },
+                  {
+                    "assists": {
+                      "type": "label",
+                      "text": "#cell",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "88%",
+                        0
+                      ],
+                      "size": [
+                        "10%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "bindings": [
+                        {
+                          "binding_name": "#hud_title_text_string"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "('%.3s' * (#hud_title_text_string - (('%.' + ($row_at + 40) + 's') * #hud_title_text_string)))",
+                          "target_property_name": "#cell"
+                        }
+                      ],
+                      "color": [
+                        0.38,
+                        0.42,
+                        0.47
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "self": {
+          "type": "panel",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((('%.1s' * (#hud_title_text_string - (('%.' + ($row_at + 0) + 's') * #hud_title_text_string))) = 'S') or (('%.1s' * (#hud_title_text_string - (('%.' + ($row_at + 0) + 's') * #hud_title_text_string))) = 'X'))",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "allied": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#hud_title_text_string"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(('%.1s' * (#hud_title_text_string - (('%.' + (205) + 's') * #hud_title_text_string))) = $role_code)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "icon": {
+                      "type": "image",
+                      "texture": "$portrait",
+                      "size": [
+                        11,
+                        11
+                      ],
+                      "offset": [
+                        "8%",
+                        1
+                      ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "layer": 3,
+                      "color": [
+                        1,
+                        1,
+                        1
+                      ]
+                    }
+                  },
+                  {
+                    "rank": {
+                      "type": "label",
+                      "text": "#cell",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "1%",
+                        0
+                      ],
+                      "size": [
+                        "5%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "bindings": [
+                        {
+                          "binding_name": "#hud_title_text_string"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "('%.1s' * (#hud_title_text_string - (('%.' + ($row_at + 1) + 's') * #hud_title_text_string)))",
+                          "target_property_name": "#cell"
+                        }
+                      ],
+                      "color": [
+                        1,
+                        1,
+                        1
+                      ]
+                    }
+                  },
+                  {
+                    "name": {
+                      "type": "label",
+                      "text": "#cell",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "15%",
+                        0
+                      ],
+                      "size": [
+                        "39%",
+                        14
+                      ],
+                      "text_alignment": "left",
+                      "layer": 3,
+                      "bindings": [
+                        {
+                          "binding_name": "#hud_title_text_string"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "('%.32s' * (#hud_title_text_string - (('%.' + ($row_at + 2) + 's') * #hud_title_text_string)))",
+                          "target_property_name": "#cell"
+                        }
+                      ],
+                      "color": [
+                        1,
+                        1,
+                        1
+                      ]
+                    }
+                  },
+                  {
+                    "kills": {
+                      "type": "label",
+                      "text": "#cell",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "54%",
+                        0
+                      ],
+                      "size": [
+                        "10%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "bindings": [
+                        {
+                          "binding_name": "#hud_title_text_string"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "('%.3s' * (#hud_title_text_string - (('%.' + ($row_at + 34) + 's') * #hud_title_text_string)))",
+                          "target_property_name": "#cell"
+                        }
+                      ],
+                      "color": [
+                        1,
+                        1,
+                        1
+                      ]
+                    }
+                  },
+                  {
+                    "deaths": {
+                      "type": "label",
+                      "text": "#cell",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "64%",
+                        0
+                      ],
+                      "size": [
+                        "10%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "bindings": [
+                        {
+                          "binding_name": "#hud_title_text_string"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "('%.3s' * (#hud_title_text_string - (('%.' + ($row_at + 37) + 's') * #hud_title_text_string)))",
+                          "target_property_name": "#cell"
+                        }
+                      ],
+                      "color": [
+                        1,
+                        1,
+                        1
+                      ]
+                    }
+                  },
+                  {
+                    "assists": {
+                      "type": "label",
+                      "text": "#cell",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "74%",
+                        0
+                      ],
+                      "size": [
+                        "10%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "bindings": [
+                        {
+                          "binding_name": "#hud_title_text_string"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "('%.3s' * (#hud_title_text_string - (('%.' + ($row_at + 40) + 's') * #hud_title_text_string)))",
+                          "target_property_name": "#cell"
+                        }
+                      ],
+                      "color": [
+                        1,
+                        1,
+                        1
+                      ]
+                    }
+                  },
+                  {
+                    "money": {
+                      "type": "label",
+                      "text": "#cell",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "84%",
+                        0
+                      ],
+                      "size": [
+                        "16%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "bindings": [
+                        {
+                          "binding_name": "#hud_title_text_string"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "('%.5s' * (#hud_title_text_string - (('%.' + ($row_at + 43) + 's') * #hud_title_text_string)))",
+                          "target_property_name": "#cell"
+                        }
+                      ],
+                      "color": [
+                        1,
+                        1,
+                        1
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "opponent": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#hud_title_text_string"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(not (('%.1s' * (#hud_title_text_string - (('%.' + (205) + 's') * #hud_title_text_string))) = $role_code))",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "icon": {
+                      "type": "image",
+                      "texture": "$portrait",
+                      "size": [
+                        11,
+                        11
+                      ],
+                      "offset": [
+                        "8%",
+                        1
+                      ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "layer": 3,
+                      "color": [
+                        1,
+                        1,
+                        1
+                      ]
+                    }
+                  },
+                  {
+                    "rank": {
+                      "type": "label",
+                      "text": "#cell",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "1%",
+                        0
+                      ],
+                      "size": [
+                        "5%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "bindings": [
+                        {
+                          "binding_name": "#hud_title_text_string"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "('%.1s' * (#hud_title_text_string - (('%.' + ($row_at + 1) + 's') * #hud_title_text_string)))",
+                          "target_property_name": "#cell"
+                        }
+                      ],
+                      "color": [
+                        1,
+                        1,
+                        1
+                      ]
+                    }
+                  },
+                  {
+                    "name": {
+                      "type": "label",
+                      "text": "#cell",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "15%",
+                        0
+                      ],
+                      "size": [
+                        "49%",
+                        14
+                      ],
+                      "text_alignment": "left",
+                      "layer": 3,
+                      "bindings": [
+                        {
+                          "binding_name": "#hud_title_text_string"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "('%.32s' * (#hud_title_text_string - (('%.' + ($row_at + 2) + 's') * #hud_title_text_string)))",
+                          "target_property_name": "#cell"
+                        }
+                      ],
+                      "color": [
+                        1,
+                        1,
+                        1
+                      ]
+                    }
+                  },
+                  {
+                    "kills": {
+                      "type": "label",
+                      "text": "#cell",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "64%",
+                        0
+                      ],
+                      "size": [
+                        "10%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "bindings": [
+                        {
+                          "binding_name": "#hud_title_text_string"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "('%.3s' * (#hud_title_text_string - (('%.' + ($row_at + 34) + 's') * #hud_title_text_string)))",
+                          "target_property_name": "#cell"
+                        }
+                      ],
+                      "color": [
+                        1,
+                        1,
+                        1
+                      ]
+                    }
+                  },
+                  {
+                    "deaths": {
+                      "type": "label",
+                      "text": "#cell",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "76%",
+                        0
+                      ],
+                      "size": [
+                        "10%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "bindings": [
+                        {
+                          "binding_name": "#hud_title_text_string"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "('%.3s' * (#hud_title_text_string - (('%.' + ($row_at + 37) + 's') * #hud_title_text_string)))",
+                          "target_property_name": "#cell"
+                        }
+                      ],
+                      "color": [
+                        1,
+                        1,
+                        1
+                      ]
+                    }
+                  },
+                  {
+                    "assists": {
+                      "type": "label",
+                      "text": "#cell",
+                      "localize": false,
+                      "shadow": false,
+                      "font_scale_factor": 0.75,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        "88%",
+                        0
+                      ],
+                      "size": [
+                        "10%",
+                        14
+                      ],
+                      "text_alignment": "center",
+                      "layer": 3,
+                      "bindings": [
+                        {
+                          "binding_name": "#hud_title_text_string"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "('%.3s' * (#hud_title_text_string - (('%.' + ($row_at + 40) + 's') * #hud_title_text_string)))",
+                          "target_property_name": "#cell"
+                        }
+                      ],
+                      "color": [
+                        1,
+                        1,
+                        1
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+pack.name=폭파전
+item.fps:bomb.name=폭탄
+item.fps:gun_sidearm.name=W05 USP
+item.fps:gun_vector.name=W04 UMP
+item.fps:gun_ranger.name=W00 AK47
+item.fps:gun_bulldog.name=W03 불독
+item.fps:gun_longshot.name=W02 AWP
+item.fps:knife.name=W14 칼
+fps.team.t=공격팀
+fps.team.ct=방어팀
+fps.ui.team=팀 선택
+fps.ui.vote=맵 투표
+fps.ui.shop=구매 메뉴
+fps.hud.plant=폭탄 설치
+fps.hud.defuse=폭탄 해제
+
+fps.banner.win=승리
+fps.banner.defeat=패배
+fps.banner.match_start=게임 시작
+fps.banner.side_switch_warning=팀 교체 전 라운드
+fps.banner.side_switch=팀 교체까지 3초
+fps.banner.round_start=라운드 시작
+fps.banner.buy_phase=구매 시간
+fps.banner.final_round=마지막 라운드
+fps.banner.ace=에이스
+fps.banner.flawless=무결점
+fps.banner.clutch=클러치
+
+item.fps:scoreboard.name=점수판
+fps.scoreboard.ct=방어 [CT]
+fps.scoreboard.t=공격 [T]
+fps.scoreboard.money=자금
+fps.scoreboard.name=이름

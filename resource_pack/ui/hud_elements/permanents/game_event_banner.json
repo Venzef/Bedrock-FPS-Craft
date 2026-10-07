@@ -1,0 +1,545 @@
+{
+  "namespace": "pm_match_events",
+  "render": {
+    "type": "stack_panel",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "orientation": "vertical",
+    "size": [
+      "33.333%",
+      "100%c"
+    ],
+    "offset": [
+      0,
+      "-75%"
+    ],
+    "factory": {
+      "name": "chat_item_factory",
+      "control_ids": {
+        "chat_item": "handle@pm_match_events.handle"
+      }
+    }
+  },
+  "destroy_wait": {
+    "anim_type": "wait",
+    "duration": 3.8,
+    "next": "@pm_match_events.destroy"
+  },
+  "destroy": {
+    "anim_type": "size",
+    "duration": 0,
+    "from": [
+      0,
+      0
+    ],
+    "to": [
+      0,
+      0
+    ],
+    "destroy_at_end": "chat_grid_item"
+  },
+  "banner_wait": {
+    "anim_type": "wait",
+    "duration": 3.8,
+    "next": "@pm_match_events.banner_fade_out"
+  },
+  "banner_fade_out": {
+    "anim_type": "alpha",
+    "duration": 0,
+    "from": 1,
+    "to": 0,
+    "easing": "in_cubic"
+  },
+  "banner_reveal": {
+    "anim_type": "size",
+    "duration": 0.4,
+    "from": [
+      0,
+      20
+    ],
+    "to": [
+      "100%",
+      20
+    ],
+    "easing": "out_quart"
+  },
+  "text_reveal_wait": {
+    "anim_type": "wait",
+    "duration": 0.4,
+    "next": "@pm_match_events.text_reveal"
+  },
+  "text_reveal": {
+    "anim_type": "size",
+    "duration": 1.5,
+    "from": [
+      0,
+      20
+    ],
+    "to": [
+      "100%",
+      20
+    ],
+    "easing": "out_quart",
+    "next": "@pm_match_events.text_hold"
+  },
+  "text_hold": {
+    "anim_type": "wait",
+    "duration": 1.9,
+    "next": "@pm_match_events.text_reset"
+  },
+  "text_reset": {
+    "anim_type": "size",
+    "duration": 0,
+    "from": [
+      0,
+      20
+    ],
+    "to": [
+      0,
+      20
+    ]
+  },
+  "text_pulse_wait": {
+    "anim_type": "wait",
+    "duration": 0.5,
+    "next": "@pm_match_events.text_pulse_in"
+  },
+  "text_pulse_in": {
+    "anim_type": "alpha",
+    "duration": 0.2,
+    "from": 0,
+    "to": 1,
+    "easing": "out_quart",
+    "next": "@pm_match_events.text_pulse_peak"
+  },
+  "text_pulse_peak": {
+    "anim_type": "wait",
+    "duration": 0.2,
+    "next": "@pm_match_events.text_pulse_out"
+  },
+  "text_pulse_out": {
+    "anim_type": "alpha",
+    "duration": 0.3,
+    "from": 1,
+    "to": 0,
+    "easing": "in_quart"
+  },
+  "text_base_wait": {
+    "anim_type": "wait",
+    "duration": 0.5,
+    "next": "@pm_match_events.text_base_out"
+  },
+  "text_base_out": {
+    "anim_type": "alpha",
+    "duration": 0.3,
+    "from": 1,
+    "to": 0,
+    "easing": "out_quart",
+    "next": "@pm_match_events.text_base_peak"
+  },
+  "text_base_peak": {
+    "anim_type": "wait",
+    "duration": 0.2,
+    "next": "@pm_match_events.text_base_in"
+  },
+  "text_base_in": {
+    "anim_type": "alpha",
+    "duration": 0.2,
+    "from": 0,
+    "to": 1,
+    "easing": "in_quart"
+  },
+  "banner_base@fc.p": {
+    "$result_text|default": "fps.banner.win",
+    "$result_color|default": [
+      0.2,
+      1,
+      0.35
+    ],
+    "$result_condition|default": "(false)",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "size": [
+      "100%",
+      20
+    ],
+    "propagate_alpha": true,
+    "anims": [
+      "@pm_match_events.banner_wait"
+    ],
+    "bindings": [
+      {
+        "binding_name": "#chat_text",
+        "binding_name_override": "#text",
+        "binding_type": "collection",
+        "binding_collection_name": "chat_text_grid",
+        "binding_condition": "once"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "$result_condition",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "reveal_base@fc.p": {
+    "size": [
+      0,
+      20
+    ],
+    "clips_children": true,
+    "anims": [
+      "@pm_match_events.banner_reveal"
+    ]
+  },
+  "label_base@fc.l": {
+    "text": "$result_text",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "text_alignment": "center",
+    "size": [
+      2000,
+      20
+    ],
+    "color": "$result_color",
+    "shadow": true
+  },
+  "result_text_label@pm_match_events.label_base": {
+    "font_scale_factor": 2,
+    "alpha": 1,
+    "anims": [
+      "@pm_match_events.text_base_wait"
+    ]
+  },
+  "result_text_pulse_label@pm_match_events.label_base": {
+    "font_scale_factor": 2.2,
+    "alpha": 0,
+    "anims": [
+      "@pm_match_events.text_pulse_wait"
+    ]
+  },
+  "simple_text_label@pm_match_events.label_base": {
+    "font_scale_factor": 1.5,
+    "alpha": 1
+  },
+  "result_text_stage@fc.p": {
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "size": [
+      0,
+      20
+    ],
+    "clips_children": true,
+    "anims": [
+      "@pm_match_events.text_reveal_wait"
+    ],
+    "controls": [
+      {
+        "result_text@pm_match_events.result_text_label": {}
+      },
+      {
+        "result_text_pulse@pm_match_events.result_text_pulse_label": {}
+      }
+    ]
+  },
+  "simple_text_stage@fc.p": {
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "size": [
+      0,
+      20
+    ],
+    "layer": 1,
+    "controls": [
+      {
+        "result_text@pm_match_events.simple_text_label": {}
+      }
+    ]
+  },
+  "result_background_shade@fc.img": {
+    "texture": "fc/white",
+    "size": [
+      "100%",
+      20
+    ],
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "alpha": 0.18
+  },
+  "result_background@fc.img": {
+    "texture": "fc/banner_gradient",
+    "size": [
+      "100%",
+      20
+    ],
+    "color": "$result_color",
+    "alpha": 1
+  },
+  "simple_background@fc.img": {
+    "texture": "fc/white",
+    "size": [
+      "100%",
+      20
+    ],
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "alpha": 0.5
+  },
+  "side_line_base@fc.img": {
+    "texture": "fc/white",
+    "size": [
+      1,
+      "100%"
+    ],
+    "color": "$result_color",
+    "alpha": 0.9
+  },
+  "left_line_template@pm_match_events.side_line_base": {
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle"
+  },
+  "right_line_template@pm_match_events.side_line_base": {
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle"
+  },
+  "banner_full_reveal@pm_match_events.banner_base": {
+    "controls": [
+      {
+        "reveal@pm_match_events.reveal_base": {
+          "controls": [
+            {
+              "text_stage@pm_match_events.result_text_stage": {}
+            },
+            {
+              "background_shade@pm_match_events.result_background_shade": {}
+            },
+            {
+              "background@pm_match_events.result_background": {}
+            },
+            {
+              "left_line@pm_match_events.left_line_template": {}
+            },
+            {
+              "right_line@pm_match_events.right_line_template": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "banner_reveal_with_bar@pm_match_events.banner_base": {
+    "controls": [
+      {
+        "reveal@pm_match_events.reveal_base": {
+          "controls": [
+            {
+              "text_stage@pm_match_events.simple_text_stage": {}
+            },
+            {
+              "background@pm_match_events.simple_background": {}
+            },
+            {
+              "left_line@pm_match_events.left_line_template": {}
+            },
+            {
+              "right_line@pm_match_events.right_line_template": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "banner_with_reveal@pm_match_events.banner_base": {
+    "controls": [
+      {
+        "reveal@pm_match_events.reveal_base": {
+          "controls": [
+            {
+              "text_stage@pm_match_events.simple_text_stage": {}
+            },
+            {
+              "background@pm_match_events.simple_background": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "banner_static@pm_match_events.banner_base": {
+    "controls": [
+      {
+        "text_stage@pm_match_events.simple_text_stage": {}
+      },
+      {
+        "background@pm_match_events.simple_background": {}
+      }
+    ]
+  },
+  "handle@fc.p": {
+    "size": [
+      "100%",
+      "100%c"
+    ],
+    "controls": [
+      {
+        "size_handle@fc.p": {
+          "size": [
+            "100%",
+            1000
+          ],
+          "anims": [
+            "@pm_match_events.destroy_wait"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#chat_text",
+              "binding_name_override": "#text",
+              "binding_type": "collection",
+              "binding_collection_name": "chat_text_grid",
+              "binding_condition": "once"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "('%.16s' * #text)",
+              "target_property_name": "#prefix"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#prefix = 'FPSCRAFT:BANNER:')",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "win@pm_match_events.banner_full_reveal": {
+                "$result_text": "fps.banner.win",
+                "$result_color": [
+                  0.2,
+                  1,
+                  0.35
+                ],
+                "$result_condition": "(#text = 'FPSCRAFT:BANNER:WIN')"
+              }
+            },
+            {
+              "defeat@pm_match_events.banner_full_reveal": {
+                "$result_text": "fps.banner.defeat",
+                "$result_color": [
+                  1,
+                  0.16,
+                  0.12
+                ],
+                "$result_condition": "(#text = 'FPSCRAFT:BANNER:DEFEAT')"
+              }
+            },
+            {
+              "match_start@pm_match_events.banner_reveal_with_bar": {
+                "$result_text": "fps.banner.match_start",
+                "$result_color": [
+                  1,
+                  1,
+                  1
+                ],
+                "$result_condition": "(#text = 'FPSCRAFT:BANNER:MATCH_START')"
+              }
+            },
+            {
+              "side_switch_warning@pm_match_events.banner_reveal_with_bar": {
+                "$result_text": "fps.banner.side_switch_warning",
+                "$result_color": [
+                  1,
+                  1,
+                  1
+                ],
+                "$result_condition": "(#text = 'FPSCRAFT:BANNER:SIDE_SWITCH_WARNING')"
+              }
+            },
+            {
+              "final_round@pm_match_events.banner_reveal_with_bar": {
+                "$result_text": "fps.banner.final_round",
+                "$result_color": [
+                  1,
+                  1,
+                  1
+                ],
+                "$result_condition": "(#text = 'FPSCRAFT:BANNER:FINAL_ROUND')"
+              }
+            },
+            {
+              "round_start@pm_match_events.banner_static": {
+                "$result_text": "fps.banner.round_start",
+                "$result_color": [
+                  1,
+                  1,
+                  1
+                ],
+                "$result_condition": "(#text = 'FPSCRAFT:BANNER:ROUND_START')"
+              }
+            },
+            {
+              "buy_phase@pm_match_events.banner_with_reveal": {
+                "$result_text": "fps.banner.buy_phase",
+                "$result_color": [
+                  1,
+                  1,
+                  1
+                ],
+                "$result_condition": "(#text = 'FPSCRAFT:BANNER:BUY_PHASE')"
+              }
+            },
+            {
+              "side_switch@pm_match_events.banner_with_reveal": {
+                "$result_text": "fps.banner.side_switch",
+                "$result_color": [
+                  1,
+                  1,
+                  1
+                ],
+                "$result_condition": "(#text = 'FPSCRAFT:BANNER:SIDE_SWITCH')"
+              }
+            },
+            {
+              "ace@pm_match_events.banner_full_reveal": {
+                "$result_text": "fps.banner.ace",
+                "$result_color": [
+                  0.2,
+                  1,
+                  0.35
+                ],
+                "$result_condition": "(#text = 'FPSCRAFT:BANNER:ACE')"
+              }
+            },
+            {
+              "flawless@pm_match_events.banner_full_reveal": {
+                "$result_text": "fps.banner.flawless",
+                "$result_color": [
+                  0.2,
+                  1,
+                  0.35
+                ],
+                "$result_condition": "(#text = 'FPSCRAFT:BANNER:FLAWLESS')"
+              }
+            },
+            {
+              "clutch@pm_match_events.banner_full_reveal": {
+                "$result_text": "fps.banner.clutch",
+                "$result_color": [
+                  0.2,
+                  1,
+                  0.35
+                ],
+                "$result_condition": "(#text = 'FPSCRAFT:BANNER:CLUTCH')"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

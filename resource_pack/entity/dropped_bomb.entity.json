@@ -1,0 +1,26 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "fps:dropped_bomb",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/planted_bomb"
+      },
+      "geometry": {
+        "default": "geometry.bomb"
+      },
+      "animations": {
+        "drop_fly": "animation.bomb.drop_fly"
+      },
+      "scripts": {
+        "animate": ["drop_fly"]
+      },
+      "render_controllers": [
+        "controller.render.fps_planted_bomb"
+      ]
+    }
+  }
+}

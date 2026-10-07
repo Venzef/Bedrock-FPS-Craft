@@ -1,0 +1,58 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Bomb Defusal BP",
+    "description": "Cross-platform MR8 bomb defusal game",
+    "uuid": "3b3f72a9-760d-4eb7-a9d2-0ca5c87714fa",
+    "version": [
+      1,
+      1,
+      25
+    ],
+    "min_engine_version": [
+      1,
+      21,
+      100
+    ]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "1b7fb9ad-2d1d-4d75-8d98-116ef18e2696",
+      "version": [
+        1,
+        1,
+        25
+      ]
+    },
+    {
+      "type": "script",
+      "language": "javascript",
+      "entry": "scripts/main.js",
+      "uuid": "8c54df16-f277-40cc-972f-638b30460ab0",
+      "version": [
+        1,
+        1,
+        25
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "module_name": "@minecraft/server",
+      "version": "2.3.0"
+    },
+    {
+      "module_name": "@minecraft/server-ui",
+      "version": "2.0.0"
+    },
+    {
+      "uuid": "bb060d23-b22d-4f33-b53c-87bf71ec0c8c",
+      "version": [
+        1,
+        1,
+        25
+      ]
+    }
+  ]
+}

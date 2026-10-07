@@ -1,0 +1,12 @@
+{
+  "ui_defs": [
+    "ui/fc.json",
+    "ui/hud_elements/gamemodes/bombdefusal.json",
+    "ui/actionbar_hud.json",
+    "ui/chat_screen.json",
+    "ui/hud_elements/permanents/game_event_banner.json",
+    "ui/hud_elements/permanents/kill_log.json",
+    "ui/custom_forms/fps_shop.json",
+    "ui/hud_elements/permanents/scoreboard.json"
+  ]
+}

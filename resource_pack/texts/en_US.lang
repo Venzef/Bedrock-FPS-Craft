@@ -1,0 +1,33 @@
+pack.name=Bomb Defusal
+item.fps:bomb.name=Bomb
+item.fps:gun_sidearm.name=W05 USP
+item.fps:gun_vector.name=W04 UMP
+item.fps:gun_ranger.name=W00 AK47
+item.fps:gun_bulldog.name=W03 Bulldog
+item.fps:gun_longshot.name=W02 AWP
+item.fps:knife.name=W14 Knife
+fps.team.t=Terrorists
+fps.team.ct=Counter-Terrorists
+fps.ui.team=Choose Team
+fps.ui.vote=Vote for a Map
+fps.ui.shop=Buy Menu
+fps.hud.plant=Planting C4
+fps.hud.defuse=Defusing C4
+
+fps.banner.win=⮔WIN⮔
+fps.banner.defeat=⮔DEFEAT⮔
+fps.banner.match_start=⮔MATCH STARTED⮔
+fps.banner.side_switch_warning=⮔ROUND BEFORE SIDE SWITCH⮔
+fps.banner.side_switch=⮔TEAMS WILL CHANGE IN: 3...⮔
+fps.banner.round_start=⮔ROUND STARTED⮔
+fps.banner.buy_phase=⮔BUY PHASE⮔
+fps.banner.final_round=⮔FINAL ROUND⮔
+fps.banner.ace=⮔ACE⮔
+fps.banner.flawless=⮔FLAWLESS⮔
+fps.banner.clutch=⮔CLUTCH⮔
+
+item.fps:scoreboard.name=Scoreboard
+fps.scoreboard.ct=DEFENDERS [CT]
+fps.scoreboard.t=ATTACKERS [T]
+fps.scoreboard.money=Money
+fps.scoreboard.name=Name

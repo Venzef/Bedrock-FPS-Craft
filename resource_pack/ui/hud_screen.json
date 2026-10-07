@@ -1,0 +1,129 @@
+{
+  "namespace": "hud_screen",
+  "hud_screen@common.base_screen": {},
+  "chat_grid_item": {
+    "type": "panel",
+    "layer": 1,
+    "size": [
+      "100%-2px",
+      "100%c"
+    ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "bindings": [
+      {
+        "binding_name": "#chat_text",
+        "binding_name_override": "#text",
+        "binding_type": "collection",
+        "binding_collection_name": "chat_text_grid",
+        "binding_condition": "once"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "('%.9s' * #text)",
+        "target_property_name": "#prefix"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not (#prefix = 'FPSCRAFT:'))",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "chat_background": {
+          "type": "image",
+          "texture": "textures/ui/Black",
+          "alpha": "$chat_background_opacity",
+          "size": [
+            "100%",
+            "100%c"
+          ],
+          "anims": [
+            "@hud.anim_chat_bg_wait"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#chat_text",
+              "binding_name_override": "#text",
+              "binding_type": "collection",
+              "binding_collection_name": "chat_text_grid",
+              "binding_condition": "once"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "('%.9s' * #text)",
+              "target_property_name": "#prefix"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not (#prefix = 'FPSCRAFT:'))",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "chat_text@chat_label": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [
+                  2,
+                  0
+                ],
+                "size": [
+                  "100% - 5px",
+                  "default"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "hud_title_text": {
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "('%.3s' * #hud_title_text_string)",
+        "target_property_name": "#prefix"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not (('%.3s' * #hud_title_text_string) = 'TMR'))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "hud_actionbar_text": {
+    "visible": false
+  },
+  "root_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "scoreboard@fps_scoreboard.render": {}
+          },
+          {
+            "game_event_banner@pm_match_events.render": {}
+          },
+          {
+            "bomb_defusal_hud@gm_bombdefusal.render": {}
+          },
+          {
+            "player_actionbar_hud@fc_actionbar.render": {}
+          },
+          {
+            "kill_log@kill_log.render": {}
+          }
+        ]
+      }
+    ]
+  }
+}

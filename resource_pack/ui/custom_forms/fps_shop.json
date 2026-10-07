@@ -1,0 +1,1036 @@
+{
+    "namespace": "fps_shop",
+    "shop_root": {
+        "type": "panel",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "controls": [
+            {
+                "dim": {
+                    "type": "image",
+                    "texture": "textures/ui/White",
+                    "color": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "alpha": 0.72,
+                    "size": [
+                        "100%",
+                        "100%"
+                    ],
+                    "anchor_from": "center",
+                    "anchor_to": "center"
+                }
+            },
+            {
+                "shop@fps_shop.shop_container": {}
+            }
+        ]
+    },
+    "shop_container": {
+        "type": "panel",
+        "size": [
+            "96%",
+            "92%"
+        ],
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "controls": [
+            {
+                "weapons@fps_shop.weapon_area": {}
+            },
+            {
+                "utilities@fps_shop.utility_area": {}
+            }
+        ]
+    },
+    "weapon_area": {
+        "type": "panel",
+        "size": [
+            "100%",
+            "80%"
+        ],
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "controls": [
+            {
+                "weapon_content": {
+                    "type": "stack_panel",
+                    "orientation": "horizontal",
+                    "size": [
+                        "97%",
+                        "100%"
+                    ],
+                    "anchor_from": "center",
+                    "anchor_to": "center",
+                    "controls": [
+                        {
+                            "pistols@fps_shop.category_5": {
+                                "size": [
+                                    "19.6%",
+                                    "100%"
+                                ],
+                                "$category_text": "Pistols",
+                                "$slot_1_name": "USP",
+                                "$slot_1_price": "500",
+                                "$slot_2_name": "",
+                                "$slot_2_price": "",
+                                "$slot_3_name": "",
+                                "$slot_3_price": "",
+                                "$slot_4_name": "",
+                                "$slot_4_price": "",
+                                "$slot_5_name": "",
+                                "$slot_5_price": "",
+                                "$slot_1_index": 0,
+                                "$slot_2_index": 1,
+                                "$slot_3_index": 2,
+                                "$slot_4_index": 3,
+                                "$slot_5_index": 4
+                            }
+                        },
+                        {
+                            "pistol_smg_gap": {
+                                "type": "panel",
+                                "size": [
+                                    "2%",
+                                    "100%"
+                                ]
+                            }
+                        },
+                        {
+                            "smgs@fps_shop.category_4": {
+                                "size": [
+                                    "19.6%",
+                                    "100%"
+                                ],
+                                "$category_text": "SMGs",
+                                "$slot_1_name": "UMP",
+                                "$slot_1_price": "1500",
+                                "$slot_2_name": "",
+                                "$slot_2_price": "",
+                                "$slot_3_name": "",
+                                "$slot_3_price": "",
+                                "$slot_4_name": "",
+                                "$slot_4_price": "",
+                                "$slot_1_index": 5,
+                                "$slot_2_index": 6,
+                                "$slot_3_index": 7,
+                                "$slot_4_index": 8
+                            }
+                        },
+                        {
+                            "rifles@fps_shop.category_4": {
+                                "size": [
+                                    "19.6%",
+                                    "100%"
+                                ],
+                                "$category_text": "Rifles",
+                                "$slot_1_name": "AK47",
+                                "$slot_1_price": "2800",
+                                "$slot_2_name": "",
+                                "$slot_2_price": "",
+                                "$slot_3_name": "",
+                                "$slot_3_price": "",
+                                "$slot_4_name": "",
+                                "$slot_4_price": "",
+                                "$slot_1_index": 9,
+                                "$slot_2_index": 10,
+                                "$slot_3_index": 11,
+                                "$slot_4_index": 12
+                            }
+                        },
+                        {
+                            "heavy@fps_shop.category_4": {
+                                "size": [
+                                    "19.6%",
+                                    "100%"
+                                ],
+                                "$category_text": "Heavy",
+                                "$slot_1_name": "Bulldog",
+                                "$slot_1_price": "2000",
+                                "$slot_2_name": "",
+                                "$slot_2_price": "",
+                                "$slot_3_name": "",
+                                "$slot_3_price": "",
+                                "$slot_4_name": "",
+                                "$slot_4_price": "",
+                                "$slot_1_index": 13,
+                                "$slot_2_index": 14,
+                                "$slot_3_index": 15,
+                                "$slot_4_index": 16
+                            }
+                        },
+                        {
+                            "snipers@fps_shop.category_4": {
+                                "size": [
+                                    "19.6%",
+                                    "100%"
+                                ],
+                                "$category_text": "Sniper Rifles",
+                                "$slot_1_name": "AWP",
+                                "$slot_1_price": "4500",
+                                "$slot_2_name": "",
+                                "$slot_2_price": "",
+                                "$slot_3_name": "",
+                                "$slot_3_price": "",
+                                "$slot_4_name": "",
+                                "$slot_4_price": "",
+                                "$slot_1_index": 17,
+                                "$slot_2_index": 18,
+                                "$slot_3_index": 19,
+                                "$slot_4_index": 20
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "category_5": {
+        "type": "panel",
+        "size": [
+            "20%",
+            "100%"
+        ],
+        "$category_text": "Category",
+        "$slot_1_name": "Item 1",
+        "$slot_1_price": "0",
+        "$slot_2_name": "Item 2",
+        "$slot_2_price": "0",
+        "$slot_3_name": "Item 3",
+        "$slot_3_price": "0",
+        "$slot_4_name": "Item 4",
+        "$slot_4_price": "0",
+        "$slot_5_name": "Item 5",
+        "$slot_5_price": "0",
+        "controls": [
+            {
+                "title@fps_shop.category_title": {
+                    "$text": "$category_text"
+                }
+            },
+            {
+                "slots": {
+                    "type": "stack_panel",
+                    "orientation": "vertical",
+                    "size": [
+                        "100%",
+                        "95%"
+                    ],
+                    "anchor_from": "bottom_middle",
+                    "anchor_to": "bottom_middle",
+                    "controls": [
+                        {
+                            "slot_1@fps_shop.shop_slot": {
+                                "$weapon_name": "$slot_1_name",
+                                "$weapon_price": "$slot_1_price",
+                                "size": [
+                                    "100%",
+                                    "20%"
+                                ],
+                                "collection_index": "$slot_1_index"
+                            }
+                        },
+                        {
+                            "slot_2@fps_shop.shop_slot": {
+                                "$weapon_name": "$slot_2_name",
+                                "$weapon_price": "$slot_2_price",
+                                "size": [
+                                    "100%",
+                                    "20%"
+                                ],
+                                "collection_index": "$slot_2_index"
+                            }
+                        },
+                        {
+                            "slot_3@fps_shop.shop_slot": {
+                                "$weapon_name": "$slot_3_name",
+                                "$weapon_price": "$slot_3_price",
+                                "size": [
+                                    "100%",
+                                    "20%"
+                                ],
+                                "collection_index": "$slot_3_index"
+                            }
+                        },
+                        {
+                            "slot_4@fps_shop.shop_slot": {
+                                "$weapon_name": "$slot_4_name",
+                                "$weapon_price": "$slot_4_price",
+                                "size": [
+                                    "100%",
+                                    "20%"
+                                ],
+                                "collection_index": "$slot_4_index"
+                            }
+                        },
+                        {
+                            "slot_5@fps_shop.shop_slot": {
+                                "$weapon_name": "$slot_5_name",
+                                "$weapon_price": "$slot_5_price",
+                                "size": [
+                                    "100%",
+                                    "20%"
+                                ],
+                                "collection_index": "$slot_5_index"
+                            }
+                        }
+                    ],
+                    "collection_name": "form_buttons"
+                }
+            }
+        ],
+        "$slot_1_index": 0,
+        "$slot_2_index": 1,
+        "$slot_3_index": 2,
+        "$slot_4_index": 3,
+        "$slot_5_index": 4
+    },
+    "category_4": {
+        "type": "panel",
+        "size": [
+            "20%",
+            "100%"
+        ],
+        "$category_text": "Category",
+        "$slot_1_name": "Item 1",
+        "$slot_1_price": "0",
+        "$slot_2_name": "Item 2",
+        "$slot_2_price": "0",
+        "$slot_3_name": "Item 3",
+        "$slot_3_price": "0",
+        "$slot_4_name": "Item 4",
+        "$slot_4_price": "0",
+        "controls": [
+            {
+                "title@fps_shop.category_title": {
+                    "$text": "$category_text"
+                }
+            },
+            {
+                "slots": {
+                    "type": "stack_panel",
+                    "orientation": "vertical",
+                    "size": [
+                        "100%",
+                        "95%"
+                    ],
+                    "anchor_from": "bottom_middle",
+                    "anchor_to": "bottom_middle",
+                    "controls": [
+                        {
+                            "slot_1@fps_shop.shop_slot": {
+                                "$weapon_name": "$slot_1_name",
+                                "$weapon_price": "$slot_1_price",
+                                "size": [
+                                    "100%",
+                                    "25%"
+                                ],
+                                "collection_index": "$slot_1_index"
+                            }
+                        },
+                        {
+                            "slot_2@fps_shop.shop_slot": {
+                                "$weapon_name": "$slot_2_name",
+                                "$weapon_price": "$slot_2_price",
+                                "size": [
+                                    "100%",
+                                    "25%"
+                                ],
+                                "collection_index": "$slot_2_index"
+                            }
+                        },
+                        {
+                            "slot_3@fps_shop.shop_slot": {
+                                "$weapon_name": "$slot_3_name",
+                                "$weapon_price": "$slot_3_price",
+                                "size": [
+                                    "100%",
+                                    "25%"
+                                ],
+                                "collection_index": "$slot_3_index"
+                            }
+                        },
+                        {
+                            "slot_4@fps_shop.shop_slot": {
+                                "$weapon_name": "$slot_4_name",
+                                "$weapon_price": "$slot_4_price",
+                                "size": [
+                                    "100%",
+                                    "25%"
+                                ],
+                                "collection_index": "$slot_4_index"
+                            }
+                        }
+                    ],
+                    "collection_name": "form_buttons"
+                }
+            }
+        ],
+        "$slot_1_index": 0,
+        "$slot_2_index": 1,
+        "$slot_3_index": 2,
+        "$slot_4_index": 3
+    },
+    "category_title": {
+        "type": "label",
+        "$text": "Category",
+        "text": "$text",
+        "font_size": "normal",
+        "color": [
+            0.88,
+            0.88,
+            0.88
+        ],
+        "shadow": true,
+        "size": [
+            "100%",
+            16
+        ],
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "offset": [
+            0,
+            1
+        ]
+    },
+    "shop_slot": {
+        "type": "panel",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "$weapon_name": "Weapon",
+        "$weapon_price": "0",
+        "bindings": [
+            {
+                "binding_name": "#form_button_text",
+                "binding_name_override": "#shop_state_text",
+                "binding_type": "collection",
+                "binding_collection_name": "form_buttons"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "((#shop_state_text - 'HIDDEN:') = #shop_state_text)",
+                "target_property_name": "#visible"
+            }
+        ],
+        "controls": [
+            {
+                "background": {
+                    "type": "image",
+                    "texture": "textures/ui/White",
+                    "color": [
+                        0.16,
+                        0.12,
+                        0.13
+                    ],
+                    "alpha": 0.58,
+                    "size": [
+                        "99%",
+                        "98%"
+                    ],
+                    "anchor_from": "center",
+                    "anchor_to": "center"
+                }
+            },
+            {
+                "image_placeholder": {
+                    "type": "image",
+                    "texture": "textures/ui/White",
+                    "color": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "alpha": 1.0,
+                    "size": [
+                        "58%",
+                        "36%"
+                    ],
+                    "anchor_from": "center",
+                    "anchor_to": "center",
+                    "offset": [
+                        0,
+                        -3
+                    ],
+                    "keep_ratio": true,
+                    "bindings": [
+                        {
+                            "binding_name": "#form_button_texture",
+                            "binding_name_override": "#texture",
+                            "binding_type": "collection",
+                            "binding_collection_name": "form_buttons"
+                        },
+                        {
+                            "binding_name": "#form_button_texture_file_system",
+                            "binding_name_override": "#texture_file_system",
+                            "binding_type": "collection",
+                            "binding_collection_name": "form_buttons"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(not ((#texture = '') or (#texture = 'loading')))",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+            {
+                "name": {
+                    "type": "label",
+                    "text": "$weapon_name",
+                    "font_size": "small",
+                    "color": [
+                        0.78,
+                        0.76,
+                        0.76
+                    ],
+                    "shadow": true,
+                    "size": [
+                        "60%",
+                        12
+                    ],
+                    "anchor_from": "bottom_left",
+                    "anchor_to": "bottom_left",
+                    "offset": [
+                        5,
+                        -4
+                    ]
+                }
+            },
+            {
+                "price_available": {
+                    "type": "label",
+                    "text": "$weapon_price",
+                    "font_size": "small",
+                    "color": [
+                        1.0,
+                        0.78,
+                        0.15
+                    ],
+                    "shadow": true,
+                    "size": [
+                        "38%",
+                        12
+                    ],
+                    "text_alignment": "right",
+                    "anchor_from": "bottom_right",
+                    "anchor_to": "bottom_right",
+                    "offset": [
+                        -5,
+                        -4
+                    ],
+                    "bindings": [
+                        {
+                            "binding_name": "#form_button_text",
+                            "binding_name_override": "#shop_state_text",
+                            "binding_type": "collection",
+                            "binding_collection_name": "form_buttons"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(not ((#shop_state_text - 'BUYABLE:') = #shop_state_text))",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+            {
+                "price_unavailable": {
+                    "type": "label",
+                    "text": "$weapon_price",
+                    "font_size": "small",
+                    "color": [
+                        1.0,
+                        0.16,
+                        0.12
+                    ],
+                    "shadow": true,
+                    "size": [
+                        "38%",
+                        12
+                    ],
+                    "text_alignment": "right",
+                    "anchor_from": "bottom_right",
+                    "anchor_to": "bottom_right",
+                    "offset": [
+                        -5,
+                        -4
+                    ],
+                    "bindings": [
+                        {
+                            "binding_name": "#form_button_text",
+                            "binding_name_override": "#shop_state_text",
+                            "binding_type": "collection",
+                            "binding_collection_name": "form_buttons"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "((#shop_state_text - 'BUYABLE:') = #shop_state_text)",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+            {
+                "click@fps_shop.shop_slot_button": {
+                    "layer": 100
+                }
+            }
+        ]
+    },
+    "utility_title": {
+        "type": "label",
+        "$text": "Group",
+        "text": "$text",
+        "font_size": "normal",
+        "color": [
+            0.88,
+            0.88,
+            0.88
+        ],
+        "shadow": true,
+        "size": [
+            "100%",
+            16
+        ],
+        "anchor_from": "bottom_left",
+        "anchor_to": "bottom_left",
+        "text_alignment": "left",
+        "offset": [
+            0,
+            2
+        ]
+    },
+    "utility_area": {
+        "type": "panel",
+        "size": [
+            "100%",
+            "20%"
+        ],
+        "anchor_from": "bottom_middle",
+        "anchor_to": "bottom_middle",
+        "controls": [
+            {
+                "utility_content": {
+                    "type": "stack_panel",
+                    "orientation": "horizontal",
+                    "size": [
+                        "97%",
+                        "100%"
+                    ],
+                    "anchor_from": "center",
+                    "anchor_to": "center",
+                    "controls": [
+                        {
+                            "equipment@fps_shop.utility_group_3": {
+                                "$group_text": "Equipment",
+                                "$slot_1_name": "Armor",
+                                "$slot_1_price": "600",
+                                "$slot_2_name": "Armor + Helmet",
+                                "$slot_2_price": "1000",
+                                "$slot_3_name": "Defuse Kit",
+                                "$slot_3_price": "400",
+                                "size": [
+                                    "38%",
+                                    "100%"
+                                ],
+                                "$slot_1_index": 21,
+                                "$slot_2_index": 22,
+                                "$slot_3_index": 23
+                            }
+                        },
+                        {
+                            "utility_gap": {
+                                "type": "panel",
+                                "size": [
+                                    "4%",
+                                    "100%"
+                                ]
+                            }
+                        },
+                        {
+                            "grenades@fps_shop.utility_group_4": {
+                                "visible": false,
+                                "$group_text": "Grenades",
+                                "$slot_1_name": "Flash",
+                                "$slot_1_price": "200",
+                                "$slot_2_name": "HE",
+                                "$slot_2_price": "300",
+                                "$slot_3_name": "Smoke",
+                                "$slot_3_price": "300",
+                                "$slot_4_name": "Molotov",
+                                "$slot_4_price": "400",
+                                "size": [
+                                    "58%",
+                                    "100%"
+                                ],
+                                "$slot_1_index": 23,
+                                "$slot_2_index": 24,
+                                "$slot_3_index": 25,
+                                "$slot_4_index": 26
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "utility_group_2": {
+        "type": "stack_panel",
+        "orientation": "vertical",
+        "$group_text": "Group",
+        "$slot_1_name": "Item 1",
+        "$slot_1_price": "0",
+        "$slot_2_name": "Item 2",
+        "$slot_2_price": "0",
+        "controls": [
+            {
+                "title_wrap": {
+                    "type": "panel",
+                    "size": [
+                        "100%",
+                        16
+                    ],
+                    "controls": [
+                        {
+                            "title@fps_shop.utility_title": {
+                                "$text": "$group_text"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "slots": {
+                    "type": "stack_panel",
+                    "orientation": "horizontal",
+                    "size": [
+                        "100%",
+                        "84%"
+                    ],
+                    "controls": [
+                        {
+                            "slot_1@fps_shop.shop_slot": {
+                                "$weapon_name": "$slot_1_name",
+                                "$weapon_price": "$slot_1_price",
+                                "size": [
+                                    "50%",
+                                    "100%"
+                                ],
+                                "collection_index": "$slot_1_index"
+                            }
+                        },
+                        {
+                            "slot_2@fps_shop.shop_slot": {
+                                "$weapon_name": "$slot_2_name",
+                                "$weapon_price": "$slot_2_price",
+                                "size": [
+                                    "50%",
+                                    "100%"
+                                ],
+                                "collection_index": "$slot_2_index"
+                            }
+                        }
+                    ],
+                    "collection_name": "form_buttons"
+                }
+            }
+        ],
+        "$slot_1_index": 0,
+        "$slot_2_index": 1
+    },
+    "utility_group_3": {
+        "type": "stack_panel",
+        "orientation": "vertical",
+        "$group_text": "Group",
+        "$slot_1_name": "Item 1",
+        "$slot_1_price": "0",
+        "$slot_2_name": "Item 2",
+        "$slot_2_price": "0",
+        "$slot_3_name": "Item 3",
+        "$slot_3_price": "0",
+        "controls": [
+            {
+                "title_wrap": {
+                    "type": "panel",
+                    "size": [
+                        "100%",
+                        16
+                    ],
+                    "controls": [
+                        {
+                            "title@fps_shop.utility_title": {
+                                "$text": "$group_text"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "slots": {
+                    "type": "stack_panel",
+                    "orientation": "horizontal",
+                    "size": [
+                        "100%",
+                        "100% - 16px"
+                    ],
+                    "controls": [
+                        {
+                            "slot_1@fps_shop.shop_slot": {
+                                "$weapon_name": "$slot_1_name",
+                                "$weapon_price": "$slot_1_price",
+                                "size": [
+                                    "33.33%",
+                                    "100%"
+                                ],
+                                "collection_index": "$slot_1_index"
+                            }
+                        },
+                        {
+                            "slot_2@fps_shop.shop_slot": {
+                                "$weapon_name": "$slot_2_name",
+                                "$weapon_price": "$slot_2_price",
+                                "size": [
+                                    "33.34%",
+                                    "100%"
+                                ],
+                                "collection_index": "$slot_2_index"
+                            }
+                        },
+                        {
+                            "slot_3@fps_shop.shop_slot": {
+                                "$weapon_name": "$slot_3_name",
+                                "$weapon_price": "$slot_3_price",
+                                "size": [
+                                    "33.33%",
+                                    "100%"
+                                ],
+                                "collection_index": "$slot_3_index"
+                            }
+                        }
+                    ],
+                    "collection_name": "form_buttons"
+                }
+            }
+        ],
+        "$slot_1_index": 0,
+        "$slot_2_index": 1,
+        "$slot_3_index": 2
+    },
+    "utility_group_4": {
+        "type": "stack_panel",
+        "orientation": "vertical",
+        "$group_text": "Group",
+        "$slot_1_name": "Item 1",
+        "$slot_1_price": "0",
+        "$slot_2_name": "Item 2",
+        "$slot_2_price": "0",
+        "$slot_3_name": "Item 3",
+        "$slot_3_price": "0",
+        "$slot_4_name": "Item 4",
+        "$slot_4_price": "0",
+        "controls": [
+            {
+                "title_wrap": {
+                    "type": "panel",
+                    "size": [
+                        "100%",
+                        16
+                    ],
+                    "controls": [
+                        {
+                            "title@fps_shop.utility_title": {
+                                "$text": "$group_text"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "slots": {
+                    "type": "stack_panel",
+                    "orientation": "horizontal",
+                    "size": [
+                        "100%",
+                        "84%"
+                    ],
+                    "controls": [
+                        {
+                            "slot_1@fps_shop.shop_slot": {
+                                "$weapon_name": "$slot_1_name",
+                                "$weapon_price": "$slot_1_price",
+                                "size": [
+                                    "25%",
+                                    "100%"
+                                ],
+                                "collection_index": "$slot_1_index"
+                            }
+                        },
+                        {
+                            "slot_2@fps_shop.shop_slot": {
+                                "$weapon_name": "$slot_2_name",
+                                "$weapon_price": "$slot_2_price",
+                                "size": [
+                                    "25%",
+                                    "100%"
+                                ],
+                                "collection_index": "$slot_2_index"
+                            }
+                        },
+                        {
+                            "slot_3@fps_shop.shop_slot": {
+                                "$weapon_name": "$slot_3_name",
+                                "$weapon_price": "$slot_3_price",
+                                "size": [
+                                    "25%",
+                                    "100%"
+                                ],
+                                "collection_index": "$slot_3_index"
+                            }
+                        },
+                        {
+                            "slot_4@fps_shop.shop_slot": {
+                                "$weapon_name": "$slot_4_name",
+                                "$weapon_price": "$slot_4_price",
+                                "size": [
+                                    "25%",
+                                    "100%"
+                                ],
+                                "collection_index": "$slot_4_index"
+                            }
+                        }
+                    ],
+                    "collection_name": "form_buttons"
+                }
+            }
+        ],
+        "$slot_1_index": 0,
+        "$slot_2_index": 1,
+        "$slot_3_index": 2,
+        "$slot_4_index": 3
+    },
+    "shop_button_default": {
+        "type": "panel",
+        "size": [
+            "100%",
+            "100%"
+        ]
+    },
+    "shop_button_hover": {
+        "type": "panel",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "controls": [
+            {
+                "hover_fill": {
+                    "type": "image",
+                    "texture": "textures/ui/White",
+                    "color": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "alpha": 0.08,
+                    "size": [
+                        "99%",
+                        "98%"
+                    ],
+                    "anchor_from": "center",
+                    "anchor_to": "center",
+                    "layer": 1
+                }
+            },
+            {
+                "hover_border@common.focus_border_white": {
+                    "size": [
+                        "99%",
+                        "98%"
+                    ],
+                    "anchor_from": "center",
+                    "anchor_to": "center",
+                    "layer": 2
+                }
+            }
+        ]
+    },
+    "shop_button_pressed": {
+        "type": "panel",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "controls": [
+            {
+                "pressed_fill": {
+                    "type": "image",
+                    "texture": "textures/ui/White",
+                    "color": [
+                        1.0,
+                        0.78,
+                        0.15
+                    ],
+                    "alpha": 0.16,
+                    "size": [
+                        "99%",
+                        "98%"
+                    ],
+                    "anchor_from": "center",
+                    "anchor_to": "center",
+                    "layer": 1
+                }
+            },
+            {
+                "pressed_border@common.focus_border_white": {
+                    "size": [
+                        "99%",
+                        "98%"
+                    ],
+                    "anchor_from": "center",
+                    "anchor_to": "center",
+                    "color": [
+                        1.0,
+                        0.78,
+                        0.15
+                    ],
+                    "layer": 2
+                }
+            }
+        ]
+    },
+    "shop_slot_button@common.button": {
+        "$pressed_button_name": "button.form_button_click",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "default_control": "default",
+        "hover_control": "hover",
+        "pressed_control": "pressed",
+        "controls": [
+            {
+                "default@fps_shop.shop_button_default": {}
+            },
+            {
+                "hover@fps_shop.shop_button_hover": {}
+            },
+            {
+                "pressed@fps_shop.shop_button_pressed": {}
+            }
+        ],
+        "bindings": [
+            {
+                "binding_type": "collection_details",
+                "binding_collection_name": "form_buttons"
+            }
+        ]
+    }
+}

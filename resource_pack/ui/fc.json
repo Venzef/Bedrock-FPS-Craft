@@ -1,0 +1,7 @@
+{
+  "namespace": "fc",
+  "p": { "type": "panel", "anchor_from": "center", "anchor_to": "center", "size": [ "100%", "100%" ] },
+  "img": { "type": "image", "texture": "textures/ui/Black", "anchor_from": "center", "anchor_to": "center" },
+  "l": { "type": "label", "text": "label", "anchor_from": "center", "anchor_to": "center" },
+  "sp": { "type": "stack_panel", "orientation": "vertical", "anchor_from": "center", "anchor_to": "center" }
+}

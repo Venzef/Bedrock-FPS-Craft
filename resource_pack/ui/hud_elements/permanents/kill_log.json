@@ -1,0 +1,175 @@
+{
+    "namespace": "kill_log",
+    "render": {
+        "type": "stack_panel",
+        "orientation": "vertical",
+        "anchor_from": "top_right",
+        "anchor_to": "top_right",
+        "offset": [
+            0,
+            0
+        ],
+        "size": [
+            260,
+            "100%c"
+        ],
+        "factory": {
+            "name": "chat_item_factory",
+            "max_children_size": 50,
+            "control_ids": {
+                "chat_item": "chat_item@kill_log.chat_grid_item"
+            }
+        }
+    },
+    "kill_item_destroy": {
+        "anim_type": "size",
+        "duration": 0,
+        "from": [
+            0,
+            0
+        ],
+        "to": [
+            0,
+            0
+        ],
+        "destroy_at_end": "chat_grid_item"
+    },
+    "kill_item_wait": {
+        "anim_type": "wait",
+        "duration": 4.5,
+        "next": "@kill_log.kill_item_destroy"
+    },
+    "kill_text_fade_out": {
+        "anim_type": "alpha",
+        "easing": "in_quart",
+        "duration": 0.5,
+        "from": 1.0,
+        "to": 0.0
+    },
+    "kill_text_wait": {
+        "anim_type": "wait",
+        "duration": 4.0,
+        "next": "@kill_log.kill_text_fade_out"
+    },
+    "kill_background_fade_out": {
+        "anim_type": "alpha",
+        "easing": "in_quart",
+        "duration": 0.5,
+        "from": 0.75,
+        "to": 0.0
+    },
+    "kill_background_wait": {
+        "anim_type": "wait",
+        "duration": 4.0,
+        "next": "@kill_log.kill_background_fade_out"
+    },
+    "chat_grid_item": {
+        "type": "panel",
+        "size": [
+            "100%",
+            "100%c + 1px"
+        ],
+        "anims": [
+            "@kill_log.kill_item_wait"
+        ],
+        "controls": [
+            {
+                "size_handle@kill_log.size_handle": {}
+            }
+        ]
+    },
+    "size_handle": {
+        "type": "image",
+        "texture": "textures/ui/Black",
+        "alpha": 0.75,
+        "size": [
+            "100%c + 8px",
+            14
+        ],
+        "max_size": [
+            260,
+            14
+        ],
+        "anchor_from": "top_right",
+        "anchor_to": "top_right",
+        "anims": [
+            "@kill_log.kill_background_wait"
+        ],
+        "bindings": [
+            {
+                "binding_name": "#chat_text",
+                "binding_name_override": "#text",
+                "binding_type": "collection",
+                "binding_collection_name": "chat_text_grid",
+                "binding_condition": "once"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(('%.21s' * #text) = 'FPSCRAFT:KILLLOG:ADD:')",
+                "target_property_name": "#visible"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(not (('%.21s' * #text) = 'FPSCRAFT:KILLLOG:ADD:'))",
+                "target_property_name": "#ignored"
+            }
+        ],
+        "controls": [
+            {
+                "kill_text_clip": {
+                    "type": "panel",
+                    "size": [
+                        "100%c",
+                        10
+                    ],
+                    "max_size": [
+                        252,
+                        10
+                    ],
+                    "anchor_from": "center",
+                    "anchor_to": "center",
+                    "clips_children": true,
+                    "controls": [
+                        {
+                            "kill_text": {
+                                "type": "label",
+                                "text": "#kill_display_text",
+                                "font_size": "small",
+                                "localize": false,
+                                "enable_profanity_filter": false,
+                                "size": [
+                                    "default",
+                                    "default"
+                                ],
+                                "anchor_from": "left_middle",
+                                "anchor_to": "left_middle",
+                                "text_alignment": "left",
+                                "shadow": false,
+                                "allow_clipping": true,
+                                "bindings": [
+                                    {
+                                        "binding_name": "#chat_text",
+                                        "binding_name_override": "#text",
+                                        "binding_type": "collection",
+                                        "binding_collection_name": "chat_text_grid",
+                                        "binding_condition": "once"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_property_name": "(#text - ('%.21s' * #text))",
+                                        "target_property_name": "#kill_body"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_property_name": "(#kill_body - ('%.1s' * #kill_body))",
+                                        "target_property_name": "#kill_display_text"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

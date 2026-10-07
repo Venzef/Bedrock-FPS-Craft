@@ -1,0 +1,26 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "fps:planted_bomb",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/planted_bomb"
+      },
+      "geometry": {
+        "default": "geometry.bomb"
+      },
+      "animations": {
+        "move": "animation.bomb.move"
+      },
+      "scripts": {
+        "animate": ["move"]
+      },
+      "render_controllers": [
+        "controller.render.fps_planted_bomb"
+      ]
+    }
+  }
+}

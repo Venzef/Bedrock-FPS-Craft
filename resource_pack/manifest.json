@@ -1,0 +1,29 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Bomb Defusal RP",
+    "description": "Models and localization for Bomb Defusal",
+    "uuid": "bb060d23-b22d-4f33-b53c-87bf71ec0c8c",
+    "version": [
+      1,
+      1,
+      25
+    ],
+    "min_engine_version": [
+      1,
+      21,
+      100
+    ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "bc483253-0e91-4102-99fa-333081569aba",
+      "version": [
+        1,
+        1,
+        25
+      ]
+    }
+  ]
+}
