@@ -2,7 +2,7 @@ node_modules/
 dist/
 build/
 *.mcpack
-*.mcaddon
+BombDefusal-Test.mcaddon
 *.mcworld
 *.zip
 /release-*/
